@@ -1,0 +1,6 @@
+# Configuration Netlify — portail client Admova
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"

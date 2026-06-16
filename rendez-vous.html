@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prendre rendez-vous — Admova</title>
+<meta name="description" content="Réservez 30 minutes avec Admova pour découvrir comment diffuser votre publicité dans les applis mobiles que vos clients utilisent chaque jour.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://admova.fr/rendez-vous.html">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#FDF5EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="preconnect" href="https://calendly.com">
+<link rel="preconnect" href="https://assets.calendly.com">
+<link rel="dns-prefetch" href="https://calendly.com">
+<style>
+  :root{
+    --terra:#D85A1A; --terra2:#C14A12; --brun:#5C1F0A; --ocre3:#FAC775;
+    --ivoire:#FDF5EE; --ivoire2:#F5E8D8; --noir:#2C2C2A; --gris:#888780; --white:#fff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'DM Sans',sans-serif;color:var(--noir);background:var(--ivoire);
+    background-image:radial-gradient(rgba(216,90,26,.10) 1.1px, transparent 1.1px);
+    background-size:26px 26px;min-height:100vh;
+  }
+  .rdv-top{max-width:1080px;margin:0 auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:inline-flex;align-items:center;gap:6px;text-decoration:none;}
+  .logo-t{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;letter-spacing:-1px;color:var(--noir);}
+  .logo-t span{color:var(--terra);}
+  .logo-dot{width:7px;height:7px;border-radius:50%;background:var(--terra);margin-left:3px;}
+  .back{font-size:13px;font-weight:600;color:var(--brun);text-decoration:none;border:1.5px solid rgba(92,31,10,.22);padding:9px 18px;border-radius:100px;transition:background .2s;}
+  .back:hover{background:rgba(216,90,26,.08);}
+  .rdv-head{max-width:720px;margin:18px auto 4px;padding:0 24px;text-align:center;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(216,90,26,.13);border:.5px solid rgba(216,90,26,.4);border-radius:100px;padding:6px 14px;margin-bottom:16px;}
+  .eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--terra);display:block;}
+  .eyebrow span{font-size:10.5px;letter-spacing:2.5px;color:var(--terra);font-weight:700;}
+  .rdv-head h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,4vw,46px);color:var(--brun);letter-spacing:-1.5px;line-height:1.15;margin:0 0 12px;}
+  .rdv-head p{font-size:16px;color:rgba(44,44,42,.65);line-height:1.6;margin:0 auto;max-width:520px;}
+  .rdv-wrap{max-width:1140px;margin:26px auto 60px;padding:0 20px;}
+  .cal-box{position:relative;min-height:720px;}
+  .cal-loader{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(92,31,10,.12);color:var(--gris);font-size:14px;z-index:2;}
+  .cal-loader .spin{width:38px;height:38px;border-radius:50%;border:3px solid var(--ivoire2);border-top-color:var(--terra);animation:calspin .8s linear infinite;}
+  @keyframes calspin{to{transform:rotate(360deg)}}
+  .calendly-inline-widget{border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(92,31,10,.12);background:#fff;}
+  .rdv-fallback{text-align:center;margin:16px 0 0;font-size:13px;color:var(--gris);}
+  .rdv-fallback a{color:var(--terra);font-weight:600;text-decoration:none;}
+  .rdv-fallback a:hover{text-decoration:underline;}
+  .rdv-foot{text-align:center;padding:0 24px 50px;color:var(--gris);font-size:13px;}
+  .rdv-foot a{color:var(--brun);text-decoration:none;font-weight:600;}
+  @media(max-width:600px){ .rdv-top{padding:16px;} .back span{display:none;} }
+</style>
+</head>
+<body>
+
+  <div class="rdv-top">
+    <a class="logo" href="index.html" aria-label="Retour à l'accueil Admova">
+      <span class="logo-t"><span>ad</span>mova</span><span class="logo-dot"></span>
+    </a>
+    <a class="back" href="index.html">← <span>Retour à l'accueil</span></a>
+  </div>
+
+  <header class="rdv-head">
+    <div class="eyebrow"><i></i><span>RENDEZ-VOUS</span></div>
+    <h1>Réservez un créneau</h1>
+    <p>30 minutes pour découvrir Admova, voir comment toucher vos clients près de chez vous, et savoir si c'est fait pour vous. Sans engagement.</p>
+  </header>
+
+  <main class="rdv-wrap">
+    <div class="cal-box">
+      <div class="cal-loader" id="calLoader"><div class="spin"></div><span>Chargement du calendrier…</span></div>
+      <iframe
+        src="https://calendly.com/contact-admova/30min?hide_gdpr_banner=1&primary_color=d85a1a&embed_domain=admova.fr&embed_type=Inline"
+        width="100%" height="720" frameborder="0" scrolling="auto"
+        title="Réserver un rendez-vous avec Admova"
+        onload="var l=document.getElementById('calLoader');if(l)l.style.display='none';"
+        style="border:0;border-radius:16px;box-shadow:0 18px 50px rgba(92,31,10,.12);background:#fff;display:block;position:relative;z-index:1;"></iframe>
+    </div>
+  </main>
+
+  <footer class="rdv-foot">
+    Un souci pour réserver ? Écrivez-nous à <a href="mailto:contact@admova.fr">contact@admova.fr</a>
+  </footer>
+
+</body>
+</html>
