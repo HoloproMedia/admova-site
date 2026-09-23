@@ -18,7 +18,21 @@ const sujets = JSON.parse(read('scripts/sujets.json'));
 const articles = JSON.parse(read('scripts/articles.json'));
 const faits = new Set(articles.map(a => a.slug));
 const sujet = sujets.find(s => !faits.has(s.slug) && !fs.existsSync(path.join(ROOT, s.slug)));
-if (!sujet) { console.log('Tous les sujets de scripts/sujets.json sont traités. Ajoutez-en de nouveaux.'); process.exit(0); }
+if (!sujet) {
+  // Liste épuisée : le robot propose lui-même un nouveau sujet, puis se relance.
+  const deja = articles.map(a => a.slug + ' : ' + a.h1).join('\n');
+  const r = await fetch('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': KEY, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: MODEL, max_tokens: 400, messages: [{ role: 'user', content: `Propose UN nouveau sujet d'article pour Admova, régie de publicité géolocalisée mobile et TV connectée. Mots-clés à travailler : géociblage, géofencing, geofence, géolocalisation, géo-repérage, ciblage précis, TV connectée, notoriété, image de marque, zone de chalandise, drive-to-store, publicité multi-sites. Le sujet ne doit recouper aucun article déjà publié :\n${deja}\nRéponds UNIQUEMENT par un JSON : {"slug":"mots-en-minuscules-sans-accents","motcle":"...","sujet":"..."}` }] }) });
+  if (!r.ok) { console.error('Erreur API', r.status, await r.text()); process.exit(1); }
+  const t = (await r.json()).content.map(c => c.text || '').join('');
+  const s = JSON.parse(t.slice(t.indexOf('{'), t.lastIndexOf('}') + 1));
+  s.slug = String(s.slug).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  if (!s.slug || faits.has(s.slug) || fs.existsSync(path.join(ROOT, s.slug))) { console.error('Sujet proposé déjà traité, relancez.'); process.exit(1); }
+  sujets.push(s);
+  write('scripts/sujets.json', JSON.stringify(sujets, null, 2));
+  const { execFileSync } = await import('node:child_process');
+  execFileSync(process.execPath, [process.argv[1]], { stdio: 'inherit', env: process.env });
+  process.exit(0);
+}
 
 const today = new Date();
 const DATE = today.toISOString().slice(0, 10);
