@@ -101,6 +101,7 @@ Univers couverts : annonces, météo, presse quotidienne, actualités, sport, ra
 ## Ressources
 
 - [Ressources — guides et analyses](https://admova.fr/ressources)
+- [Le géo-repérage au service du commerce de proximité](https://admova.fr/geo-reperage-publicite-commerce) : Le géo-repérage permet de définir un périmètre publicitaire précis autour d’une boutique et d’en mesurer l’efficacité pour le commerce de proximité.
 - [Publicité TV connectée : le marché français en 2026](https://admova.fr/marche-tv-connectee-2026) : La publicité TV connectée atteint 961 M€ en France en 2026 (+24,7 %), pendant que la TV linéaire recule de 7,9 %. Ce que ces chiffres changent pour une enseigne.
 - [Géofencing, géociblage, géolocalisation : quelles différences ?](https://admova.fr/geofencing-geociblage-geolocalisation) : Géolocalisation, géociblage, géofencing, géo-repérage : quatre termes souvent confondus. Leur définition, leurs différences, et ce qu’ils changent pour une campagne publicitaire.
 - [Quel rayon de diffusion choisir selon votre secteur ?](https://admova.fr/rayon-de-diffusion-par-secteur) : 500 m pour une boulangerie, 30 km pour une concession : le bon rayon de diffusion dépend de la distance que vos clients acceptent de parcourir. Les repères par secteur.
