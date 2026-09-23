@@ -1,0 +1,19 @@
+/* Admova — réglages de base minimaux (pas de reset agressif). */
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--surface-canvas);
+  color: var(--text-body);
+  font: var(--type-body);
+  letter-spacing: var(--tracking-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, h5 { color: var(--text-strong); margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+a { color: var(--text-link); text-decoration: none; transition: var(--transition-control); }
+a:hover { color: var(--text-link-hover); text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; border-radius: var(--radius-xs); }
+::selection { background: var(--amber-200); color: var(--ink-900); }
+img { max-width: 100%; display: block; }
+*, *::before, *::after { box-sizing: border-box; }

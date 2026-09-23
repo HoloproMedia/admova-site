@@ -1,0 +1,29 @@
+{
+  "name": "Admova — Régie publicitaire mobile et TV connectée géolocalisée",
+  "short_name": "Admova",
+  "description": "Publicité plein écran dans 1 600+ applications mobiles et spot vidéo en TV connectée, avec ciblage GPS au mètre près.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D85A1A",
+  "icons": [
+    {
+      "src": "/assets/icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ]
+}

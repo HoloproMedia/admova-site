@@ -1,0 +1,94 @@
+AUTOMATISATION DU RÉFÉRENCEMENT — ADMOVA
+========================================
+
+Chaque lundi à 7 h, un robot rédige un nouvel article, l'ajoute au site,
+met à jour sitemap.xml, llms.txt et la page Ressources, puis vous
+l'envoie par e-mail pour validation. Rien n'est publié sans votre clic.
+
+Coût : quelques centimes à 1 € par article (API Anthropic).
+GitHub Actions et Netlify restent gratuits à ce volume.
+
+
+MISE EN PLACE (une seule fois, environ 15 minutes)
+--------------------------------------------------
+
+1. METTRE LE SITE DANS GITHUB
+   - Ouvrez github.com/HoloproMedia/admova-site
+   - Supprimez les anciens fichiers (vous avez choisi d'abandonner
+     l'ancien site et son espace client).
+   - Bouton « Add file » → « Upload files » → glissez TOUT le contenu
+     du dossier « dist », y compris les dossiers « .github » et « scripts ».
+     Attention : le dossier « .github » est masqué par défaut sur Mac.
+     Dans le Finder, appuyez sur Cmd + Maj + point pour l'afficher.
+   - « Commit changes ».
+
+2. RELIER NETLIFY À GITHUB
+   - app.netlify.com → votre site → Site configuration
+     → Build & deploy → Continuous deployment → Link repository
+   - Choisissez GitHub, puis HoloproMedia/admova-site, branche main.
+   - Build command : laissez vide. Publish directory : un point « . »
+   - Désormais, chaque modification dans GitHub est publiée seule.
+     Vous n'importez plus jamais de ZIP.
+
+3. CRÉER LA CLÉ API
+   - console.anthropic.com → créez un compte → Billing : ajoutez
+     un moyen de paiement et 5 € de crédit (cela couvre des mois).
+   - API Keys → Create Key → copiez la clé (elle commence par sk-ant-).
+
+4. DONNER LA CLÉ À GITHUB
+   - Dans le dépôt : Settings → Secrets and variables → Actions
+     → New repository secret
+   - Name : ANTHROPIC_API_KEY
+   - Secret : collez la clé → Add secret.
+
+5. AUTORISER LE ROBOT À PROPOSER DES ARTICLES
+   - Settings → Actions → General
+   - Section « Workflow permissions » : cochez « Read and write
+     permissions » et « Allow GitHub Actions to create and approve
+     pull requests » → Save.
+
+6. RECEVOIR LES E-MAILS
+   - En haut du dépôt, bouton « Watch » → « All Activity ».
+   - Vérifiez dans github.com/settings/notifications que les e-mails
+     sont activés.
+
+7. PREMIER ESSAI
+   - Onglet « Actions » → « Article SEO hebdomadaire »
+     → « Run workflow » → « Run workflow ».
+   - Deux minutes plus tard, un e-mail arrive et une pull request
+     apparaît dans l'onglet « Pull requests ».
+
+
+CHAQUE LUNDI
+------------
+
+1. Vous recevez l'e-mail « Article SEO : … ».
+2. Ouvrez la pull request. Netlify y ajoute un lien d'aperçu
+   (« Deploy Preview ») : cliquez pour voir l'article en situation.
+3. Relisez. Vérifiez qu'aucun chiffre ni nom de client n'a été inventé.
+4. Si tout est bon : « Merge pull request » → « Confirm merge ».
+   Le site est à jour en une minute.
+   Si l'article ne convient pas : « Close pull request ». Rien n'est publié.
+
+
+AJOUTER DES SUJETS
+------------------
+
+La liste des sujets est dans scripts/sujets.json (12 sujets, soit trois
+mois de publication). Quand elle est épuisée, le robot s'arrête sans
+erreur. Pour en ajouter, modifiez ce fichier dans GitHub en suivant le
+même format : slug (adresse), motcle, sujet.
+
+Les faits qu'il a le droit d'utiliser sont dans scripts/nouvel-article.mjs,
+bloc FAITS_ADMOVA. Mettez-les à jour quand vos chiffres évoluent
+(nombre de campagnes, de clients…).
+
+
+IMPORTANT
+---------
+
+Une fois l'automatisation lancée, le dépôt GitHub devient la version de
+référence du site : il contient les articles publiés par le robot.
+Si vous demandez une modification du site dans le projet de design,
+précisez-le : les nouveaux articles devront être récupérés depuis GitHub
+avant tout nouvel export, sinon ils seraient écrasés.

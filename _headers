@@ -1,0 +1,95 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+/
+  Link: <https://admova.fr/>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/>; rel="alternate"; hreflang="fr", <https://admova.fr/>; rel="alternate"; hreflang="x-default"
+
+/notre-solution
+  Link: <https://admova.fr/notre-solution>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/notre-solution>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/notre-solution>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/notre-solution>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/notre-solution>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/notre-solution>; rel="alternate"; hreflang="fr", <https://admova.fr/notre-solution>; rel="alternate"; hreflang="x-default"
+
+/comment-ca-marche
+  Link: <https://admova.fr/comment-ca-marche>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/comment-ca-marche>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/comment-ca-marche>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/comment-ca-marche>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/comment-ca-marche>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/comment-ca-marche>; rel="alternate"; hreflang="fr", <https://admova.fr/comment-ca-marche>; rel="alternate"; hreflang="x-default"
+
+/rendez-vous
+  Link: <https://admova.fr/rendez-vous>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/rendez-vous>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/rendez-vous>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/rendez-vous>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/rendez-vous>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/rendez-vous>; rel="alternate"; hreflang="fr", <https://admova.fr/rendez-vous>; rel="alternate"; hreflang="x-default"
+
+/pour-qui
+  Link: <https://admova.fr/pour-qui>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/pour-qui>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/pour-qui>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/pour-qui>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/pour-qui>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/pour-qui>; rel="alternate"; hreflang="fr", <https://admova.fr/pour-qui>; rel="alternate"; hreflang="x-default"
+
+/secteurs
+  Link: <https://admova.fr/secteurs>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/secteurs>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/secteurs>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/secteurs>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/secteurs>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/secteurs>; rel="alternate"; hreflang="fr", <https://admova.fr/secteurs>; rel="alternate"; hreflang="x-default"
+
+/applications-partenaires
+  Link: <https://admova.fr/applications-partenaires>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/applications-partenaires>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/applications-partenaires>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/applications-partenaires>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/applications-partenaires>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/applications-partenaires>; rel="alternate"; hreflang="fr", <https://admova.fr/applications-partenaires>; rel="alternate"; hreflang="x-default"
+
+/temoignages
+  Link: <https://admova.fr/temoignages>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/temoignages>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/temoignages>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/temoignages>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/temoignages>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/temoignages>; rel="alternate"; hreflang="fr", <https://admova.fr/temoignages>; rel="alternate"; hreflang="x-default"
+
+/tpe-pme
+  Link: <https://admova.fr/tpe-pme>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/tpe-pme>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/tpe-pme>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/tpe-pme>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/tpe-pme>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/tpe-pme>; rel="alternate"; hreflang="fr", <https://admova.fr/tpe-pme>; rel="alternate"; hreflang="x-default"
+
+/franchises
+  Link: <https://admova.fr/franchises>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/franchises>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/franchises>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/franchises>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/franchises>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/franchises>; rel="alternate"; hreflang="fr", <https://admova.fr/franchises>; rel="alternate"; hreflang="x-default"
+
+/grands-comptes
+  Link: <https://admova.fr/grands-comptes>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/grands-comptes>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/grands-comptes>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/grands-comptes>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/grands-comptes>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/grands-comptes>; rel="alternate"; hreflang="fr", <https://admova.fr/grands-comptes>; rel="alternate"; hreflang="x-default"
+
+/secteur-commerce
+  Link: <https://admova.fr/secteur-commerce>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/secteur-commerce>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/secteur-commerce>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/secteur-commerce>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/secteur-commerce>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/secteur-commerce>; rel="alternate"; hreflang="fr", <https://admova.fr/secteur-commerce>; rel="alternate"; hreflang="x-default"
+
+/secteur-automobile
+  Link: <https://admova.fr/secteur-automobile>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/secteur-automobile>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/secteur-automobile>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/secteur-automobile>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/secteur-automobile>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/secteur-automobile>; rel="alternate"; hreflang="fr", <https://admova.fr/secteur-automobile>; rel="alternate"; hreflang="x-default"
+
+/secteur-immobilier
+  Link: <https://admova.fr/secteur-immobilier>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/secteur-immobilier>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/secteur-immobilier>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/secteur-immobilier>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/secteur-immobilier>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/secteur-immobilier>; rel="alternate"; hreflang="fr", <https://admova.fr/secteur-immobilier>; rel="alternate"; hreflang="x-default"
+
+/secteur-restauration
+  Link: <https://admova.fr/secteur-restauration>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/secteur-restauration>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/secteur-restauration>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/secteur-restauration>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/secteur-restauration>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/secteur-restauration>; rel="alternate"; hreflang="fr", <https://admova.fr/secteur-restauration>; rel="alternate"; hreflang="x-default"
+
+/secteur-sante
+  Link: <https://admova.fr/secteur-sante>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/secteur-sante>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/secteur-sante>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/secteur-sante>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/secteur-sante>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/secteur-sante>; rel="alternate"; hreflang="fr", <https://admova.fr/secteur-sante>; rel="alternate"; hreflang="x-default"
+
+/secteur-hotellerie
+  Link: <https://admova.fr/secteur-hotellerie>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/secteur-hotellerie>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/secteur-hotellerie>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/secteur-hotellerie>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/secteur-hotellerie>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/secteur-hotellerie>; rel="alternate"; hreflang="fr", <https://admova.fr/secteur-hotellerie>; rel="alternate"; hreflang="x-default"
+
+/secteur-services
+  Link: <https://admova.fr/secteur-services>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/secteur-services>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/secteur-services>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/secteur-services>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/secteur-services>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/secteur-services>; rel="alternate"; hreflang="fr", <https://admova.fr/secteur-services>; rel="alternate"; hreflang="x-default"
+
+/a-propos
+  Link: <https://admova.fr/a-propos>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/a-propos>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/a-propos>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/a-propos>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/a-propos>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/a-propos>; rel="alternate"; hreflang="fr", <https://admova.fr/a-propos>; rel="alternate"; hreflang="x-default"
+
+/faq
+  Link: <https://admova.fr/faq>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/faq>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/faq>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/faq>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/faq>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/faq>; rel="alternate"; hreflang="fr", <https://admova.fr/faq>; rel="alternate"; hreflang="x-default"
+
+/confidentialite
+  Link: <https://admova.fr/confidentialite>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/confidentialite>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/confidentialite>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/confidentialite>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/confidentialite>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/confidentialite>; rel="alternate"; hreflang="fr", <https://admova.fr/confidentialite>; rel="alternate"; hreflang="x-default"
+
+/mentions-legales
+  Link: <https://admova.fr/mentions-legales>; rel="alternate"; hreflang="fr-FR", <https://admova.fr/mentions-legales>; rel="alternate"; hreflang="fr-BE", <https://admova.fr/mentions-legales>; rel="alternate"; hreflang="fr-CH", <https://admova.fr/mentions-legales>; rel="alternate"; hreflang="fr-LU", <https://admova.fr/mentions-legales>; rel="alternate"; hreflang="fr-CA", <https://admova.fr/mentions-legales>; rel="alternate"; hreflang="fr", <https://admova.fr/mentions-legales>; rel="alternate"; hreflang="x-default"
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/_ds/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/admova-tag.js
+  Cache-Control: public, max-age=3600
+
+/support.js
+  Cache-Control: public, max-age=604800
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8

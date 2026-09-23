@@ -1,0 +1,95 @@
+/* Admova — couleurs. Base (échelles) puis alias sémantiques. */
+:root {
+  /* ---- Brand : orange Admova (échantillonné sur le logo) ---- */
+  --orange-100: #fbe8da;
+  --orange-200: #f4cdae;
+  --orange-300: #eda87c;
+  --orange-400: #e2783c;
+  --orange-500: #d85a1a; /* orange de marque, issu du logo */
+  --orange-600: #b8460f;
+  --orange-700: #8e340a;
+
+  /* ---- Accent : ambre (signal, données, surlignage) ---- */
+  --amber-100: #fcf1d2;
+  --amber-200: #f8e0a2;
+  --amber-300: #f2c64b;
+  --amber-400: #e8b21a;
+  --amber-500: #c9960c;
+
+  /* ---- Encre : neutres chauds (base = encre du logo) ---- */
+  --ink-900: #1a1a18;
+  --ink-800: #262521;
+  --ink-700: #33322e;
+  --ink-600: #45443e;
+  --ink-500: #5c5a54;
+  --ink-400: #807d75;
+  --ink-300: #a8a49a;
+  --ink-200: #cfc7b6;
+  --ink-100: #e6e1d6;
+
+  /* ---- Sable : surfaces chaudes ---- */
+  --sand-50: #fbf8f2;
+  --sand-100: #f6f1e7;
+  --sand-200: #ede5d6;
+  --sand-300: #ded3be;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  /* ---- Sémantique ---- */
+  --success-500: #2e7d5b;
+  --success-100: #dff0e7;
+  --warning-500: #e8b21a;
+  --warning-100: #fcf1d2;
+  --danger-500: #c0341a;
+  --danger-100: #f9e2dd;
+  --info-500: #2b5f8f;
+  --info-100: #e0ecf6;
+
+  /* ================= ALIAS ================= */
+  /* Surfaces */
+  --surface-canvas: var(--white);
+  --surface-raised: var(--white);
+  --surface-sand: var(--sand-100);
+  --surface-sand-soft: var(--sand-50);
+  --surface-sand-deep: var(--sand-200);
+  --surface-ink: #141412;        /* sections TV connectée / démos */
+  --surface-ink-soft: #1f1e1b;
+  --surface-brand: var(--orange-500);
+  --surface-accent: var(--amber-400);
+
+  /* Texte */
+  --text-strong: var(--ink-900);
+  --text-body: var(--ink-700);
+  --text-muted: var(--ink-500);
+  --text-subtle: var(--ink-400);
+  --text-disabled: var(--ink-300);
+  --text-on-brand: var(--white);
+  --text-on-ink: #f6f1e7;
+  --text-on-ink-muted: #a8a49a;
+  --text-on-sand: var(--ink-900);
+  --text-link: var(--orange-600);
+  --text-link-hover: var(--orange-700);
+
+  /* Bordures */
+  --border-soft: #f0ece3;
+  --border-default: var(--ink-100);
+  --border-strong: var(--ink-200);
+  --border-sand: var(--sand-300);
+  --border-brand: var(--orange-500);
+  --border-on-ink: rgba(246, 241, 231, 0.14);
+
+  /* Interactif */
+  --action-primary: var(--orange-500);
+  --action-primary-hover: var(--orange-600);
+  --action-primary-active: var(--orange-700);
+  --action-ink: var(--ink-900);
+  --action-ink-hover: var(--ink-700);
+  --focus-ring: var(--orange-500);
+
+  /* Signature de marque */
+  --signal-band: linear-gradient(90deg, var(--orange-600) 0%, var(--orange-500) 26%, var(--amber-400) 62%, var(--amber-200) 84%, var(--sand-100) 100%);
+  --geo-ring: rgba(216, 90, 26, 0.28);
+  --geo-fill: rgba(216, 90, 26, 0.08);
+  --geo-grid: rgba(26, 26, 24, 0.06);
+}

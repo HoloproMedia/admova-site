@@ -1,0 +1,6 @@
+/* Admova — webfonts.
+   SUBSTITUTION : aucun fichier de fonte n'a été fourni. Le logo « admova » est un
+   grotesque géométrique (a à un étage, terminaisons plates) ; Archivo en est le
+   plus proche parent disponible sur Google Fonts. Instrument Serif fournit la voix
+   éditoriale des titres. Remplacer par les fontes réelles si la marque en possède. */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap');

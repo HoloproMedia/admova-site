@@ -1,0 +1,14 @@
+[
+  { "slug": "geo-reperage-publicite-commerce", "motcle": "géo-repérage", "sujet": "Le géo-repérage appliqué au commerce de proximité : définir un périmètre autour d'une boutique et en mesurer l'effet" },
+  { "slug": "publicite-tv-connectee-pme", "motcle": "publicité TV connectée PME", "sujet": "La publicité en TV connectée est-elle accessible à une PME ? Budget d'entrée, ciblage local, mesure" },
+  { "slug": "ciblage-precis-publicite-mobile", "motcle": "ciblage précis", "sujet": "Ciblage précis en publicité mobile : GPS, adresse IP, code postal — ce que chaque méthode vaut réellement" },
+  { "slug": "notoriete-locale-image-de-marque", "motcle": "notoriété locale", "sujet": "Construire une notoriété locale et une image de marque premium grâce à la TV connectée et au plein écran mobile" },
+  { "slug": "geofence-concession-automobile", "motcle": "geofence", "sujet": "Geofence pour concession automobile : pourquoi le rayon doit être large, et comment mesurer les visites" },
+  { "slug": "publicite-geolocalisee-restaurant", "motcle": "publicité géolocalisée restaurant", "sujet": "Publicité géolocalisée pour restaurant : cibler l'heure du déjeuner dans un rayon de quelques centaines de mètres" },
+  { "slug": "publicite-geolocalisee-agence-immobiliere", "motcle": "publicité géolocalisée immobilier", "sujet": "Publicité géolocalisée pour agence immobilière : couvrir son secteur quartier par quartier" },
+  { "slug": "zone-de-chalandise-definition", "motcle": "zone de chalandise", "sujet": "Qu'est-ce qu'une zone de chalandise, et comment l'utiliser pour régler une campagne publicitaire" },
+  { "slug": "mesurer-campagne-drive-to-store", "motcle": "drive-to-store", "sujet": "Drive-to-store : comment mesurer l'effet d'une campagne mobile sur la fréquentation d'un point de vente" },
+  { "slug": "attention-publicitaire-tv-apps-reseaux-sociaux", "motcle": "attention publicitaire", "sujet": "Attention et confiance : pourquoi la TV connectée et les applications captent mieux l'attention que certains environnements publicitaires en ligne" },
+  { "slug": "publicite-geolocalisee-belgique-suisse", "motcle": "publicité géolocalisée Belgique", "sujet": "Publicité géolocalisée en Belgique, en Suisse et au Luxembourg : diffuser dans tout l'espace francophone" },
+  { "slug": "brief-creatif-interstitiel", "motcle": "visuel publicitaire mobile", "sujet": "Réussir le visuel d'une publicité plein écran mobile : les règles d'un bon interstitiel 9:16" }
+]

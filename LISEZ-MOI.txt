@@ -1,0 +1,58 @@
+SITE ADMOVA — DÉPLOIEMENT NETLIFY
+=================================
+
+MISE EN LIGNE
+-------------
+1. Décompressez ce dossier.
+2. app.netlify.com → votre site → onglet « Deploys ».
+3. Glissez-déposez le dossier « dist » entier dans la zone de dépôt.
+4. C'est en ligne.
+
+Premier déploiement : Site configuration → Domain management → Add domain → admova.fr
+
+FORMULAIRE
+----------
+Le formulaire est branché sur Netlify Forms (nom : demande-rappel).
+Avant le premier déploiement : Site configuration → Forms → Form detection → Enable.
+Ensuite : Site configuration → Notifications → Form submission notifications
+→ Add notification → Email notification → contact@admova.fr
+
+GOOGLE ADS
+----------
+La balise AW-18456938681 est chargée sur les 22 pages via /admova-tag.js,
+avec Consent Mode v2 et bandeau de consentement.
+
+Il reste UNE chose à renseigner : l'étiquette de conversion.
+Google Ads → Objectifs → Conversions → votre action → Configurer la balise
+→ « Installer manuellement ». Vous lirez send_to: 'AW-18456938681/AbCdEfGhIjK'.
+Copiez la partie après la barre oblique dans admova-tag.js, ligne 25 :
+  var CONVERSION_LABEL = 'AbCdEfGhIjK';
+Sans cette étiquette, les leads sont suivis mais pas comptés comme conversions.
+
+CONTENU DU DOSSIER
+------------------
+index.html                 accueil                 → admova.fr/
+notre-solution/ …          21 pages internes       → admova.fr/notre-solution
+assets/                    logo, favicons, visuels, vidéo du héros
+_ds/                       design system (requis par le simulateur)
+support.js                 moteur de rendu (requis)
+admova-tag.js              balise Google Ads + consentement
+sitemap.xml                21 URLs, 7 hreflang chacune
+robots.txt                 28 robots autorisés, dont ChatGPT, Claude, Perplexity
+llms.txt / llms-full.txt   dossier pour les moteurs de réponse IA
+site.webmanifest           icônes d'écran d'accueil
+_headers                   cache, sécurité, hreflang par page
+_redirects                 anciennes URLs et page 404
+
+APRÈS LA MISE EN LIGNE
+----------------------
+1. search.google.com/search-console → ajoutez admova.fr → soumettez sitemap.xml
+2. bing.com/webmasters → même opération
+3. Si votre domaine diffère d'admova.fr, remplacez-le dans sitemap.xml,
+   robots.txt, llms.txt et les balises canoniques des pages.
+
+À NOTER
+-------
+Les pages s'affichent via JavaScript. Google et Bing les indexent (ils exécutent
+le JS), mais un HTML statique servi tel quel serait plus rapide. Demandez une
+version pré-rendue si vous visez la performance maximale.

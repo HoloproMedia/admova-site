@@ -1,6 +1,7 @@
-# Configuration Netlify — portail client Admova
 [build]
   publish = "."
 
-[functions]
-  directory = "netlify/functions"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
