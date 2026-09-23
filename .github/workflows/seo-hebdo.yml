@@ -1,0 +1,46 @@
+# Admova — article SEO hebdomadaire.
+# Chaque lundi à 7 h (heure de Paris), rédige un article et ouvre une
+# pull request. GitHub vous envoie un e-mail ; vous relisez, puis « Merge ».
+name: Article SEO hebdomadaire
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'   # lundi 5 h UTC = 7 h à Paris (6 h en hiver)
+  workflow_dispatch:       # bouton « Run workflow » pour lancer à la main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  article:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rédiger l'article
+        id: redaction
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/nouvel-article.mjs
+
+      - name: Ouvrir la pull request
+        if: steps.redaction.outputs.slug != ''
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: seo/${{ steps.redaction.outputs.slug }}
+          commit-message: "Article : ${{ steps.redaction.outputs.titre }}"
+          title: "Article SEO : ${{ steps.redaction.outputs.titre }}"
+          body-path: .seo-resume.md
+          add-paths: |
+            ${{ steps.redaction.outputs.slug }}/index.html
+            sitemap.xml
+            llms.txt
+            llms-full.txt
+            ressources/index.html
+            scripts/articles.json
+          delete-branch: true
