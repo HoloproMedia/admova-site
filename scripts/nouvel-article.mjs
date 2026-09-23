@@ -45,10 +45,13 @@ Faits autorisés (n'utilise AUCUN autre chiffre, AUCUN nom de client non listé)
 Règles d'écriture :
 - Vouvoiement. « Vous » pour le lecteur, « nous » ou « Admova » pour l'entreprise.
 - Phrases courtes et factuelles. Interdits : révolutionnaire, leader, innovant, ultra-ciblé, incontournable, point d'exclamation, emoji.
-- Titres de section en phrase complète. Pas de majuscule à chaque mot.
+- Titres de section courts, avec point final. Pas de majuscule à chaque mot.
 - Si tu cites un chiffre de marché, indique la source dans le champ "note" du bloc.
 - 500 à 800 mots au total, 4 ou 5 blocs. Le mot-clé principal apparaît dans le h1, le chapô et au moins un h2.
 - Dernier bloc : comment Admova répond au sujet, sans formule commerciale.
+- Le h1 fait 70 caractères au maximum : ne recopie jamais le sujet mot pour mot.
+- Chaque h2 fait 60 caractères au maximum : un titre court, pas une phrase entière.
+- N'attribue jamais à Admova une méthode, un outil ou une mesure absents des faits autorisés (groupe témoin, suivi des visites en magasin, taux de conversion…). Un principe général du marché peut être expliqué, en précisant qu'il ne s'agit pas d'une offre Admova.
 
 Réponds UNIQUEMENT par un objet JSON valide, sans texte autour :
 {"kicker":"1 à 2 mots","h1":"titre avec point final","title":"titre SEO de 55 à 65 caractères se terminant par — Admova","desc":"meta description de 140 à 160 caractères","lead":"chapô de 1 ou 2 phrases","blocks":[{"h2":"...","ps":["..."],"ul":["..."],"table":{"head":["..."],"rows":[["..."]]},"note":"..."}]}
