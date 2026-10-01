@@ -75,9 +75,6 @@
 /_ds/*
   Cache-Control: public, max-age=31536000, immutable
 
-/admova-tag.js
-  Cache-Control: public, max-age=3600
-
 /support.js
   Cache-Control: public, max-age=604800
 
