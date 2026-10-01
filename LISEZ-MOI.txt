@@ -17,18 +17,6 @@ Avant le premier déploiement : Site configuration → Forms → Form detection 
 Ensuite : Site configuration → Notifications → Form submission notifications
 → Add notification → Email notification → contact@admova.fr
 
-GOOGLE ADS
-----------
-La balise AW-18456938681 est chargée sur les 22 pages via /admova-tag.js,
-avec Consent Mode v2 et bandeau de consentement.
-
-Il reste UNE chose à renseigner : l'étiquette de conversion.
-Google Ads → Objectifs → Conversions → votre action → Configurer la balise
-→ « Installer manuellement ». Vous lirez send_to: 'AW-18456938681/AbCdEfGhIjK'.
-Copiez la partie après la barre oblique dans admova-tag.js, ligne 25 :
-  var CONVERSION_LABEL = 'AbCdEfGhIjK';
-Sans cette étiquette, les leads sont suivis mais pas comptés comme conversions.
-
 CONTENU DU DOSSIER
 ------------------
 index.html                 accueil                 → admova.fr/
@@ -36,7 +24,6 @@ notre-solution/ …          21 pages internes       → admova.fr/notre-solutio
 assets/                    logo, favicons, visuels, vidéo du héros
 _ds/                       design system (requis par le simulateur)
 support.js                 moteur de rendu (requis)
-admova-tag.js              balise Google Ads + consentement
 sitemap.xml                21 URLs, 7 hreflang chacune
 robots.txt                 28 robots autorisés, dont ChatGPT, Claude, Perplexity
 llms.txt / llms-full.txt   dossier pour les moteurs de réponse IA

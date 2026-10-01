@@ -8,8 +8,6 @@
 <body>
 <x-dc>
 <helmet>
-<script src="/admova-tag.js"></script>
-
 <meta name="description" content="Nos experts du géociblage étudient votre zone de chalandise et définissent votre geofence. Réponse sous 24 h, sans jargon.">
 <link rel="canonical" href="https://admova.fr/rendez-vous">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -477,7 +475,6 @@ class Component extends DCLogic {
         fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
           .then((r) => {
             if (!r.ok) throw new Error('HTTP ' + r.status);
-            if (window.admovaTrackLead) window.admovaTrackLead(f);
             this.setState({ sent: true, sending: false });
           })
           .catch(() => {

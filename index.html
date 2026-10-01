@@ -8,8 +8,6 @@
 <body>
 <x-dc>
 <helmet>
-<script src="/admova-tag.js"></script>
-
 <meta name="description" content="Géociblage publicitaire au mètre près : votre publicité sur 1 600+ applications mobiles et en TV connectée, uniquement dans votre zone. Géofencing, ciblage précis, image de marque premium et notoriété. Visuel inclus, en ligne en 48 h.">
 <link rel="canonical" href="https://admova.fr/">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -1318,7 +1316,6 @@ class Component extends DCLogic {
         fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
           .then((r) => {
             if (!r.ok) throw new Error('HTTP ' + r.status);
-            if (window.admovaTrackLead) window.admovaTrackLead(f);
             this.setState({ sent: true, sending: false });
           })
           .catch(() => {
