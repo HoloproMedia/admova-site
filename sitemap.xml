@@ -288,7 +288,7 @@
   </url>
   <url>
     <loc>https://admova.fr/ressources</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://admova.fr/ressources"/>
@@ -389,5 +389,18 @@
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://admova.fr/ciblage-precis-publicite-mobile"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://admova.fr/ciblage-precis-publicite-mobile"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://admova.fr/ciblage-precis-publicite-mobile"/>
+  </url>
+  <url>
+    <loc>https://admova.fr/notoriete-locale-image-de-marque</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://admova.fr/notoriete-locale-image-de-marque"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://admova.fr/notoriete-locale-image-de-marque"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://admova.fr/notoriete-locale-image-de-marque"/>
+    <xhtml:link rel="alternate" hreflang="fr-LU" href="https://admova.fr/notoriete-locale-image-de-marque"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://admova.fr/notoriete-locale-image-de-marque"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://admova.fr/notoriete-locale-image-de-marque"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://admova.fr/notoriete-locale-image-de-marque"/>
   </url>
 </urlset>
