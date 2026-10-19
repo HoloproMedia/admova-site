@@ -101,6 +101,7 @@ Univers couverts : annonces, météo, presse quotidienne, actualités, sport, ra
 ## Ressources
 
 - [Ressources — guides et analyses](https://admova.fr/ressources)
+- [Geofence automobile : pourquoi un rayon large est indispensable](https://admova.fr/geofence-concession-automobile) : Pour une concession automobile, le geofence exige un rayon de 15 à 30 km. Explications sur la zone de chalandise et la mesure des visites.
 - [Notoriété locale et premium : TV connectée et mobile plein écran](https://admova.fr/notoriete-locale-image-de-marque) : Développez votre notoriété locale et votre image premium grâce à la TV connectée et au format plein écran mobile géolocalisé.
 - [Ciblage précis : GPS, IP, code postal, quelle méthode choisir ?](https://admova.fr/ciblage-precis-publicite-mobile) : GPS, adresse IP ou code postal : trois méthodes de ciblage géographique aux performances très différentes. Comparatif factuel pour la publicité mobile.
 - [Publicité TV connectée : le marché français en 2026](https://admova.fr/marche-tv-connectee-2026) : La publicité TV connectée atteint 961 M€ en France en 2026 (+24,7 %), pendant que la TV linéaire recule de 7,9 %. Ce que ces chiffres changent pour une enseigne.
