@@ -13,7 +13,7 @@
   window.__admovaOaiq = true;
 
   var PIXEL_ID = 'UaQk2H6VXxLYanBPMCPPF8';
-  var DEBUG = true;                          // à passer à false après vos tests
+  var DEBUG = false;                         // mode test désactivé le 20/10/2026 après validation
   var KEY = 'admova_consent';                // 'granted' | 'denied'
 
   /* 1. Code officiel d'installation (inchangé) */
