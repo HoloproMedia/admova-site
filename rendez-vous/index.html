@@ -295,6 +295,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     [data-navinner] > nav[data-r="navmenu"] { display: none !important; }
     [data-burger] { display: block !important; }
   }
+
+  /* ---- champ « Comment nous avez-vous connu ? » ---- */
+  [data-src]:hover { border-color: #E3C9B6 !important; }
+  [data-src]:has(input:checked) { border-color: #D85A1A !important; background: #FDF0E8 !important; }
+  [data-src]:has(input:focus-visible) { box-shadow: 0 0 0 3px rgba(216,90,26,0.14) !important; }
+  button[data-locked="true"] { background: #CFCAC2 !important; color: #ffffff !important; cursor: not-allowed !important; box-shadow: none !important; transform: none !important; }
 </style>
 </helmet>
 <div style="min-height:100vh;background:#ffffff;color:#5B6371;font-family:Inter,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased">
@@ -401,7 +407,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </select>
         </label>
         <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Message *</span><textarea required="required" data-focusable="" rows="4" value="{{ f.message }}" onChange="{{ setMessage }}" placeholder="Votre projet en quelques mots" style="border:1px solid #F0DDD0;border-radius:20px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:16px 22px;outline:none;resize:vertical;font-family:inherit;line-height:1.6;transition:border-color 160ms ease, box-shadow 160ms ease"></textarea></label>
-        <button data-btn="solid" type="submit" disabled="{{ sending }}" style="align-self:flex-start;border:0;border-radius:9999px;background:#B8480F;color:#ffffff;font-size:15px;font-weight:600;padding:16px 32px;cursor:pointer">{{ sendLabel }}</button>
+        <fieldset data-srcset="" aria-required="true" style="margin:0;padding:0;border:0;min-width:0;display:flex;flex-direction:column;gap:10px">
+          <legend style="padding:0;margin:0 0 10px;font-size:14px;font-weight:600;color:#0A0A0A">Comment nous avez-vous connu ? *</legend>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px">
+            <sc-for list="{{ sources }}" as="so" hint-placeholder-count="6">
+              <label data-src="" style="display:flex;align-items:center;gap:12px;min-height:48px;padding:12px 16px;box-sizing:border-box;border:1px solid #F0DDD0;border-radius:12px;background:#ffffff;cursor:pointer;font-size:14px;font-weight:500;line-height:1.35;color:#0A0A0A;transition:border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease">
+                <input type="radio" name="source" value="{{ so.v }}" checked="{{ so.checked }}" onChange="{{ so.pick }}" style="flex:none;width:18px;height:18px;margin:0;accent-color:#D85A1A;cursor:pointer">
+                <span>{{ so.v }}</span>
+              </label>
+            </sc-for>
+          </div>
+          <sc-if value="{{ srcError }}" hint-placeholder-val="{{ false }}">
+            <p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">Merci d’indiquer comment vous nous avez connu</p>
+          </sc-if>
+        </fieldset>
+        <button data-btn="solid" type="submit" disabled="{{ sending }}" data-locked="{{ locked }}" aria-disabled="{{ locked }}" style="align-self:flex-start;border:0;border-radius:9999px;background:#B8480F;color:#ffffff;font-size:15px;font-weight:600;padding:16px 32px;cursor:pointer">{{ sendLabel }}</button>
       </form>
     </sc-if>
     <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
@@ -440,7 +460,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { sent: false, sending: false, form: { prenom: '', nom: '', email: '', tel: '', secteur: '', ville: '', taille: '', sites: '', budget: '', message: '' } };
+  state = { sent: false, sending: false, form: { prenom: '', nom: '', email: '', tel: '', secteur: '', ville: '', taille: '', sites: '', budget: '', message: '', source: '' }, srcError: false };
 
   componentDidMount() { this.ensureReveal(); }
 
@@ -468,11 +488,15 @@ class Component extends DCLogic {
       sent: this.state.sent,
       notSent: !this.state.sent,
       sending: this.state.sending,
+      sources: ['Google', 'Intelligence artificielle (ChatGPT, Claude…)', 'Bouche à oreille / recommandation', 'Facebook', 'Instagram', 'LinkedIn'].map((v) => ({ v, checked: this.state.form.source === v, pick: () => this.setState((s) => ({ form: { ...s.form, source: v }, srcError: false })) })),
+      srcError: this.state.srcError,
+      locked: !this.state.form.source,
       sendLabel: this.state.sending ? 'Envoi en cours…' : 'Demander une étude gratuite',
       setPrenom: set('prenom'), setNom: set('nom'), setEmail: set('email'), setTel: set('tel'),
       setSecteur: set('secteur'), setVille: set('ville'), setTaille: set('taille'), setSites: set('sites'), setBudget: set('budget'), setMessage: set('message'),
       submit: (e) => {
         if (e && e.preventDefault) e.preventDefault();
+        if (!this.state.form.source) { this.setState({ srcError: true }); return; }
         const f = this.state.form;
         const body = new URLSearchParams({
           'form-name': 'demande-rappel',
@@ -480,6 +504,7 @@ class Component extends DCLogic {
           prenom: f.prenom, nom: f.nom, email: f.email, telephone: f.tel,
           secteur: f.secteur, ville: f.ville, taille: f.taille,
           points_de_vente: f.sites, budget: f.budget, message: f.message,
+          source: f.source,
           page: (typeof location !== 'undefined' ? location.pathname : ''),
         });
         this.setState({ sending: true, error: false });
@@ -533,6 +558,7 @@ class Component extends DCLogic {
   <input type="text" name="budget">
   <textarea name="message"></textarea>
   <input type="text" name="page">
+  <input type="text" name="source">
 </form>
 </body>
 </html>
