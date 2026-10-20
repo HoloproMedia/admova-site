@@ -8,6 +8,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WTCJ7G4B');</script>
 <!-- End Google Tag Manager -->
+<script src="/admova-oaiq.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="/support.js"></script>
@@ -430,7 +431,7 @@ class Component extends DCLogic {
         { delay: '60ms', n: '02', k: 'Données que nous collectons', mail: false, lines: [
           'Formulaire de contact. Prénom, nom, adresse électronique, numéro de téléphone, secteur d’activité, ville, taille de l’entreprise, nombre de points de vente, budget envisagé et message. Ces champs sont ceux que vous saisissez vous-même.',
           'Formulaires publicitaires. Si vous répondez à une annonce Admova sur Google, votre nom, votre adresse électronique, votre numéro de téléphone et le nom de votre entreprise nous sont transmis par Google, tels que vous les avez renseignés dans le formulaire affiché avec l’annonce.',
-          'Données de navigation. Aucun cookie de mesure ni traceur publicitaire n’est déposé sur ce site.',
+          'Données de navigation. Uniquement si vous l’acceptez dans le bandeau de cookies : un identifiant de navigation pseudonyme et un identifiant de clic publicitaire, utilisés pour mesurer l’efficacité de nos annonces diffusées dans ChatGPT. Aucun nom, aucune adresse électronique ni aucun contenu du formulaire n’est transmis à cette occasion.',
           'Nous ne collectons aucune donnée sensible au sens de l’article 9 du RGPD : ni origine, ni opinion, ni appartenance syndicale, ni donnée de santé, ni donnée biométrique.',
         ] },
         { delay: '120ms', n: '03', k: 'Finalités et bases légales', mail: false, lines: [
@@ -451,6 +452,7 @@ class Component extends DCLogic {
           'Vos données sont accessibles à l’équipe commerciale d’Admova — cinq personnes — et à nos prestataires techniques, agissant comme sous-traitants et liés par contrat :',
           'Netlify, Inc. — hébergement du site et réception des formulaires. 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.',
           'Google Ireland Limited — formulaires publicitaires affichés dans les annonces Google. Gordon House, Barrow Street, Dublin 4, Irlande.',
+          'OpenAI — mesure de l’efficacité de nos annonces diffusées dans ChatGPT, uniquement avec votre accord. OpenAI Ireland Limited, 1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper, Dublin 1, Irlande.',
           'Aucune donnée n’est cédée, louée ni revendue. Aucun courtier en données n’intervient.',
         ] },
         { delay: '360ms', n: '07', k: 'Transferts hors Union européenne', mail: false, lines: [
@@ -458,8 +460,10 @@ class Component extends DCLogic {
           'Vous pouvez obtenir copie des garanties applicables sur simple demande.',
         ] },
         { delay: '420ms', n: '08', k: 'Cookies', mail: false, lines: [
-          'Ce site ne dépose aucun cookie publicitaire ni cookie de mesure d’audience.',
-          'Seuls des éléments strictement nécessaires à son fonctionnement peuvent être utilisés. Ils ne requièrent pas votre accord, au titre de l’article 82 de la loi Informatique et Libertés.',
+          'Avec votre accord seulement, le site dépose deux cookies de mesure publicitaire d’OpenAI : __oppref, identifiant du clic sur une annonce ChatGPT, conservé 30 jours, et __obref, identifiant pseudonyme du navigateur, conservé 365 jours.',
+          'Ils servent uniquement à savoir si une visite ou une demande d’étude fait suite à une annonce Admova dans ChatGPT. Sans votre accord, aucun de ces cookies n’est déposé et aucune mesure n’est envoyée.',
+          'Vous pouvez retirer votre accord à tout moment avec le lien « Gérer les cookies », en bas de chaque page. Les deux cookies sont alors supprimés.',
+          'Les éléments strictement nécessaires au fonctionnement du site, dont la mémorisation de votre choix, ne requièrent pas votre accord, au titre de l’article 82 de la loi Informatique et Libertés.',
         ] },
         { delay: '480ms', n: '09', k: 'Vos droits', mail: true, lines: [
           'Conformément au règlement (UE) 2016/679 et à la loi Informatique et Libertés, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation du traitement, d’opposition et de portabilité, ainsi que du droit de retirer votre consentement à tout moment.',
@@ -493,6 +497,7 @@ class Component extends DCLogic {
           { label: 'Secteurs', href: '/secteurs/' },
           { label: 'Nous contacter', href: '/rendez-vous/' },
           { label: 'Mentions légales', href: '/mentions-legales/' },
+          { label: 'Gérer les cookies', href: '#cookies' },
           { label: 'Confidentialité', href: '/confidentialite/' },
         ] },
       ],
