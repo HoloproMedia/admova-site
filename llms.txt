@@ -101,6 +101,7 @@ Univers couverts : annonces, météo, presse quotidienne, actualités, sport, ra
 ## Ressources
 
 - [Ressources — guides et analyses](https://admova.fr/ressources)
+- [Publicité géolocalisée restaurant : capter les clients à midi](https://admova.fr/publicite-geolocalisee-restaurant) : La publicité géolocalisée restaurant permet de toucher les consommateurs à l’heure du déjeuner dans un rayon de 500 m à 2 km. Ciblage GPS au mètre près.
 - [Geofence automobile : pourquoi un rayon large est indispensable](https://admova.fr/geofence-concession-automobile) : Pour une concession automobile, le geofence exige un rayon de 15 à 30 km. Explications sur la zone de chalandise et la mesure des visites.
 - [Notoriété locale et premium : TV connectée et mobile plein écran](https://admova.fr/notoriete-locale-image-de-marque) : Développez votre notoriété locale et votre image premium grâce à la TV connectée et au format plein écran mobile géolocalisé.
 - [Ciblage précis : GPS, IP, code postal, quelle méthode choisir ?](https://admova.fr/ciblage-precis-publicite-mobile) : GPS, adresse IP ou code postal : trois méthodes de ciblage géographique aux performances très différentes. Comparatif factuel pour la publicité mobile.
