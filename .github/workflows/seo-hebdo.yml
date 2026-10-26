@@ -1,8 +1,9 @@
-# Admova — illustre en une fois les articles déjà publiés.
-# Lancement à la main : onglet Actions → « Illustrer les articles » → Run workflow.
-name: Illustrer les articles
+# Admova — article SEO hebdomadaire, illustré (photo Unsplash + graphique).
+name: Article SEO hebdomadaire
 
 on:
+  schedule:
+    - cron: '0 5 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -10,28 +11,34 @@ permissions:
   pull-requests: write
 
 jobs:
-  illustrer:
+  article:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Ajouter photos et graphiques
-        id: illus
+      - name: Rédiger l'article
+        id: redaction
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-        run: node scripts/illustrer-existants.mjs
+        run: node scripts/nouvel-article.mjs
       - name: Ouvrir la pull request
-        if: steps.illus.outputs.nb != '0'
+        if: steps.redaction.outputs.slug != ''
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: seo/illustrations
-          commit-message: "Articles : photos et graphiques"
-          title: "Articles illustrés : photos et graphiques"
+          branch: seo/${{ steps.redaction.outputs.slug }}
+          commit-message: "Article : ${{ steps.redaction.outputs.titre }}"
+          title: "Article SEO : ${{ steps.redaction.outputs.titre }}"
           body-path: .seo-resume.md
           add-paths: |
-            */index.html
+            ${{ steps.redaction.outputs.slug }}/index.html
+            sitemap.xml
+            llms.txt
+            llms-full.txt
+            ressources/index.html
+            scripts/articles.json
+            scripts/sujets.json
             scripts/photos.json
           delete-branch: true
