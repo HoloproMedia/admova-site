@@ -4,6 +4,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { illustrer } from './illustrer.mjs';
 
 const ROOT = process.cwd();
 const SITE = 'https://admova.fr';
@@ -114,6 +115,12 @@ for (const [k, v] of Object.entries(rep)) page = page.split(k).join(v);
 // dans le JSON-LD, les valeurs doivent être échappées pour JSON et non pour HTML
 page = page.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, (m) => m.split(esc(h1)).join(je(h1)).split(esc(desc)).join(je(desc)).split(esc(title)).join(je(title)));
 if (/%%[A-Z0-9]+%%/.test(page)) { console.error('Marqueur non remplacé dans le gabarit.'); process.exit(1); }
+// ---------- photo et graphique ----------
+let illus = { photo: 'aucune', graphique: 'aucun' };
+try {
+  const r = await illustrer(page, { key: KEY, model: MODEL, unsplashKey: process.env.UNSPLASH_ACCESS_KEY, motcle: sujet.motcle, sujet: sujet.sujet });
+  page = r.html; illus = r.bilan;
+} catch (e) { console.error('Illustration impossible, article publié sans :', e.message); }
 write(`${slug}/index.html`, page);
 
 // ---------- sitemap ----------
@@ -170,12 +177,16 @@ ${lead}
 ### Sections
 ${a.blocks.map(b => '- ' + fix(b.h2)).join('\n')}
 
+### Illustrations
+- Photo : ${illus.photo}
+- Graphique : ${illus.graphique}
+
 ### Mis à jour automatiquement
 - \`${slug}/index.html\` créé
 - \`sitemap.xml\`, \`llms.txt\` et la page Ressources mis à jour
 
 ### Avant de cliquer « Merge »
-Ouvrez l'aperçu Netlify ci-dessous, relisez l'article, et vérifiez qu'aucun chiffre ni nom de client n'a été inventé.
+Ouvrez l'aperçu Netlify ci-dessous, relisez l'article, et vérifiez qu'aucun chiffre ni nom de client n'a été inventé, et que la photo correspond au sujet.
 `;
 write('.seo-resume.md', resume);
 console.log(resume);
