@@ -908,6 +908,7 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
             <input required="required" data-focusable="" type="tel" value="{{ f.tel }}" onChange="{{ setTel }}" placeholder="Téléphone" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease">
           </label>
         </div>
+        <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Nom de l’entreprise *</span><input required="required" data-focusable="" autocomplete="organization" value="{{ f.entreprise }}" onChange="{{ setEntreprise }}" placeholder="Nom de l’entreprise" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"></label>
         <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
           <label style="display:flex;flex-direction:column;gap:7px">
             <span style="font-size:14px;font-weight:600;color:#0A0A0A">Secteur d’activité *</span>
@@ -1017,7 +1018,7 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { heroIn: false, volOpen: false, vidStarted: false, vidPlaying: false, vidEnded: false, vidMuted: false, sent: false, sending: false, form: { prenom: '', nom: '', email: '', tel: '', secteur: '', ville: '', taille: '', sites: '', budget: '', message: '', source: '' }, srcError: false };
+  state = { heroIn: false, volOpen: false, vidStarted: false, vidPlaying: false, vidEnded: false, vidMuted: false, sent: false, sending: false, form: { prenom: '', nom: '', entreprise: '', email: '', tel: '', secteur: '', ville: '', taille: '', sites: '', budget: '', message: '', source: '' }, srcError: false };
 
   ensureLoopVideos() {
     if (window.__admovaLoopVids) return;
@@ -1334,7 +1335,7 @@ class Component extends DCLogic {
       srcError: this.state.srcError,
       locked: !this.state.form.source,
       sendLabel: this.state.sending ? 'Envoi en cours…' : 'Demander une étude gratuite',
-      setPrenom: set('prenom'), setNom: set('nom'), setEmail: set('email'), setTel: set('tel'),
+      setPrenom: set('prenom'), setNom: set('nom'), setEntreprise: set('entreprise'), setEmail: set('email'), setTel: set('tel'),
       setSecteur: set('secteur'), setVille: set('ville'), setTaille: set('taille'), setSites: set('sites'), setBudget: set('budget'), setMessage: set('message'),
       submit: (e) => {
         if (e && e.preventDefault) e.preventDefault();
@@ -1343,7 +1344,7 @@ class Component extends DCLogic {
         const body = new URLSearchParams({
           'form-name': 'demande-rappel',
           'bot-field': '',
-          prenom: f.prenom, nom: f.nom, email: f.email, telephone: f.tel,
+          prenom: f.prenom, nom: f.nom, entreprise: f.entreprise, email: f.email, telephone: f.tel,
           secteur: f.secteur, ville: f.ville, taille: f.taille,
           points_de_vente: f.sites, budget: f.budget, message: f.message,
           source: f.source,
@@ -1395,6 +1396,7 @@ class Component extends DCLogic {
   <input type="text" name="bot-field">
   <input type="text" name="prenom">
   <input type="text" name="nom">
+  <input type="text" name="entreprise">
   <input type="email" name="email">
   <input type="tel" name="telephone">
   <input type="text" name="secteur">
