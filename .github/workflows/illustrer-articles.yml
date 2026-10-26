@@ -1,0 +1,37 @@
+# Admova — illustre en une fois les articles déjà publiés.
+# Lancement à la main : onglet Actions → « Illustrer les articles » → Run workflow.
+name: Illustrer les articles
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  illustrer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Ajouter photos et graphiques
+        id: illus
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: node scripts/illustrer-existants.mjs
+      - name: Ouvrir la pull request
+        if: steps.illus.outputs.nb != '0'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: seo/illustrations
+          commit-message: "Articles : photos et graphiques"
+          title: "Articles illustrés : photos et graphiques"
+          body-path: .seo-resume.md
+          add-paths: |
+            */index.html
+            scripts/photos.json
+          delete-branch: true
