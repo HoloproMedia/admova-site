@@ -585,20 +585,29 @@ class Component extends DCLogic {
   ensurePartialCapture() {
     if (this._pc || typeof window === 'undefined') return;
     this._pc = true;
-    const leave = () => this.sendPartial('abandon à l’étape ' + this.state.step);
-    this._onLeave = () => { if (document.visibilityState === 'hidden') leave(); };
-    this._onHide = leave;
-    document.addEventListener('visibilitychange', this._onLeave);
+    // Fermeture de l'onglet ou départ vers un autre site : c'est la dernière occasion
+    // d'envoyer, rien ne peut s'exécuter ensuite. Changer d'onglet n'envoie rien.
+    this._onHide = () => { clearTimeout(this._partialTimer); this._partialTimer = null; this.sendPartial('a quitté la page à l’étape ' + this.state.step); };
     window.addEventListener('pagehide', this._onHide);
   }
 
+  // Une étape validée lance un délai de 5 min ; toute saisie le relance.
+  // Si le visiteur envoie sa demande avant, rien de partiel ne part.
+  armPartial() {
+    clearTimeout(this._partialTimer);
+    this._partialTimer = setTimeout(() => {
+      this._partialTimer = null;
+      this.sendPartial('sans activité depuis 5 min, à l’étape ' + this.state.step);
+    }, 5 * 60 * 1000);
+  }
+
   componentWillUnmount() {
-    if (this._onLeave) document.removeEventListener('visibilitychange', this._onLeave);
+    clearTimeout(this._partialTimer);
     if (this._onHide) window.removeEventListener('pagehide', this._onHide);
   }
 
   renderVals() {
-    const set = (k) => (e) => { const v = e.target.value; this.setState(s => ({ form: { ...s.form, [k]: v }, err: s.err[k] ? { ...s.err, [k]: '' } : s.err })); };
+    const set = (k) => (e) => { const v = e.target.value; if (this._partialTimer) this.armPartial(); this.setState(s => ({ form: { ...s.form, [k]: v }, err: s.err[k] ? { ...s.err, [k]: '' } : s.err })); };
     const st = this.state.step, er = this.state.err || {};
     const KEYS = ['prenom','nom','email','tel','entreprise','secteur','ville','sites','budget','taille','message'];
     this.ensureReveal();
@@ -608,7 +617,7 @@ class Component extends DCLogic {
       sent: this.state.sent,
       notSent: !this.state.sent,
       sending: this.state.sending,
-      sources: ['Google', 'Intelligence artificielle (ChatGPT, Claude…)', 'Bouche à oreille / recommandation', 'Facebook', 'Instagram', 'LinkedIn'].map((v) => ({ v, checked: this.state.form.source === v, pick: () => this.setState((s) => ({ form: { ...s.form, source: v }, srcError: false, err: { ...s.err, source: '' } })) })),
+      sources: ['Google', 'Intelligence artificielle (ChatGPT, Claude…)', 'Bouche à oreille / recommandation', 'Facebook', 'Instagram', 'LinkedIn'].map((v) => ({ v, checked: this.state.form.source === v, pick: () => { if (this._partialTimer) this.armPartial(); this.setState((s) => ({ form: { ...s.form, source: v }, srcError: false, err: { ...s.err, source: '' } })); } })),
       srcError: this.state.srcError,
       step: st, stepName: ['Vous', 'Votre entreprise', 'Votre projet'][st - 1],
       seg1: 'on', seg2: st >= 2 ? 'on' : 'off', seg3: st >= 3 ? 'on' : 'off',
@@ -623,7 +632,7 @@ class Component extends DCLogic {
       setSecteur: set('secteur'), setVille: set('ville'), setTaille: set('taille'), setSites: set('sites'), setBudget: set('budget'), setMessage: set('message'),
       submit: (e) => {
         if (e && e.preventDefault) e.preventDefault();
-        if (this.state.step < 3) { if (this.validate(this.state.step)) { this.sendPartial('étape ' + this.state.step + ' complétée'); this.goStep(this.state.step + 1, 'next'); } return; }
+        if (this.state.step < 3) { if (this.validate(this.state.step)) { this.armPartial(); this.goStep(this.state.step + 1, 'next'); } return; }
         if (!this.validate(3)) return;
         const f = this.state.form;
         const body = new URLSearchParams({
@@ -636,6 +645,7 @@ class Component extends DCLogic {
           page: (typeof location !== 'undefined' ? location.pathname : ''),
         });
         this._finalSent = true;
+        clearTimeout(this._partialTimer); this._partialTimer = null;
         this.setState({ sending: true, error: false });
         fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
           .then((r) => {
