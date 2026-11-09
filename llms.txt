@@ -101,6 +101,7 @@ Univers couverts : annonces, météo, presse quotidienne, actualités, sport, ra
 ## Ressources
 
 - [Ressources — guides et analyses](https://admova.fr/ressources)
+- [Zone de chalandise : définition et usage en publicité](https://admova.fr/zone-de-chalandise-definition) : Qu’est-ce qu’une zone de chalandise ? Comment l’exploiter pour cibler vos campagnes publicitaires locales ? Définition, rayons et applications.
 - [Publicité géolocalisée immobilier : couvrir chaque quartier](https://admova.fr/publicite-geolocalisee-agence-immobiliere) : La publicité géolocalisée permet aux agences immobilières de cibler précisément chaque quartier avec des annonces adaptées au rayon d’action local.
 - [Publicité géolocalisée restaurant : capter les clients à midi](https://admova.fr/publicite-geolocalisee-restaurant) : La publicité géolocalisée restaurant permet de toucher les consommateurs à l’heure du déjeuner dans un rayon de 500 m à 2 km. Ciblage GPS au mètre près.
 - [Geofence automobile : pourquoi un rayon large est indispensable](https://admova.fr/geofence-concession-automobile) : Pour une concession automobile, le geofence exige un rayon de 15 à 30 km. Explications sur la zone de chalandise et la mesure des visites.
