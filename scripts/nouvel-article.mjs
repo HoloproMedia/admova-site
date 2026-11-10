@@ -93,7 +93,7 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const je = (s) => String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 
 const slug = sujet.slug;
-const URL_ = `${SITE}/${slug}`;
+const URL_ = `${SITE}/${slug}/`;
 const P = 'margin:0;font-size:17px;line-height:1.75;color:#5B6371';
 const table = (t) => `<div style="overflow-x:auto;border:1px solid #EFF0F2;border-radius:12px"><table style="width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:420px"><thead><tr>${t.head.map(c => `<th style="text-align:left;padding:13px 16px;background:#F6F1E7;color:#0A0A0A;font-weight:700;border-bottom:1px solid #EFF0F2">${esc(fix(c))}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r => `<tr>${r.map((c, i) => `<td style="padding:12px 16px;border-bottom:1px solid #F1F2F4;color:${i === 0 ? '#0A0A0A' : '#5B6371'};font-weight:${i === 0 ? 600 : 400}">${esc(fix(c))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 
@@ -128,7 +128,7 @@ let sm = read('sitemap.xml');
 if (!sm.includes(`<loc>${URL_}</loc>`)) {
   const hl = ['fr-FR', 'fr-BE', 'fr-CH', 'fr-LU', 'fr-CA', 'fr', 'x-default'].map(l => `    <xhtml:link rel="alternate" hreflang="${l}" href="${URL_}"/>`).join('\n');
   sm = sm.replace('</urlset>', `  <url>\n    <loc>${URL_}</loc>\n    <lastmod>${DATE}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n${hl}\n  </url>\n</urlset>`);
-  sm = sm.replace(/(<loc>https:\/\/admova\.fr\/ressources<\/loc>\s*<lastmod>)[^<]+/, `$1${DATE}`);
+  sm = sm.replace(/(<loc>https:\/\/admova\.fr\/ressources\/<\/loc>\s*<lastmod>)[^<]+/, `$1${DATE}`);
   write('sitemap.xml', sm);
 }
 

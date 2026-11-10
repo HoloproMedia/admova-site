@@ -13,7 +13,7 @@ Six termes, une seule mécanique. Si l’on vous interroge sur l’un d’entre 
 - **Géo-repérage** — le terme français pour geofencing. Même mécanique, même précision.
 - **Ciblage précis** — la conséquence : zéro impression hors de la zone.
 
-Glossaire détaillé : https://admova.fr/notre-solution#glossaire
+Glossaire détaillé : https://admova.fr/notre-solution/#glossaire
 
 ## Réponse courte
 
@@ -78,41 +78,41 @@ Univers couverts : annonces, météo, presse quotidienne, actualités, sport, ra
 
 ## Pour qui
 
-- **TPE et PME** — offre tout inclus, sans service marketing requis. https://admova.fr/tpe-pme
-- **Franchises, réseaux et ETI** — déploiement multi-sites coordonné, reporting consolidé. https://admova.fr/franchises
-- **Grands comptes nationaux** — stratégie sur mesure, interlocuteur dédié, indicateurs contractuels. https://admova.fr/grands-comptes
+- **TPE et PME** — offre tout inclus, sans service marketing requis. https://admova.fr/tpe-pme/
+- **Franchises, réseaux et ETI** — déploiement multi-sites coordonné, reporting consolidé. https://admova.fr/franchises/
+- **Grands comptes nationaux** — stratégie sur mesure, interlocuteur dédié, indicateurs contractuels. https://admova.fr/grands-comptes/
 
 ## Pages du site
 
 - [Accueil](https://admova.fr/) — présentation générale, les deux écrans, chiffres-clés
-- [Notre solution](https://admova.fr/notre-solution) — format, ciblage GPS, inventaire, TV connectée, reporting
-- [Comment ça marche](https://admova.fr/comment-ca-marche) — les 4 étapes, fonctionnement du ciblage
-- [Pour qui](https://admova.fr/pour-qui) — par taille d’entreprise, budget adaptable, couverture francophone
-- [Secteurs](https://admova.fr/secteurs) — rayon de diffusion secteur par secteur
-- [Commerce & Retail](https://admova.fr/secteur-commerce) · [Automobile](https://admova.fr/secteur-automobile) · [Immobilier](https://admova.fr/secteur-immobilier) · [Restauration](https://admova.fr/secteur-restauration) · [Santé](https://admova.fr/secteur-sante) · [Hôtellerie](https://admova.fr/secteur-hotellerie) · [Services & B2B](https://admova.fr/secteur-services)
-- [Applications partenaires](https://admova.fr/applications-partenaires) — catalogue de l’inventaire
-- [Questions fréquentes](https://admova.fr/faq) — géofencing, rayons, inventaire, TV connectée, délais, mesure
-- [Témoignages](https://admova.fr/temoignages) — enseignes clientes et campagnes
-- [À propos](https://admova.fr/a-propos) — HOLOPRO Média, histoire, équipe
-- [Nous contacter](https://admova.fr/rendez-vous) — étude de zone gratuite, réponse sous 24 h
-- [Mentions légales](https://admova.fr/mentions-legales)
-- [Politique de confidentialité](https://admova.fr/confidentialite)
+- [Notre solution](https://admova.fr/notre-solution/) — format, ciblage GPS, inventaire, TV connectée, reporting
+- [Comment ça marche](https://admova.fr/comment-ca-marche/) — les 4 étapes, fonctionnement du ciblage
+- [Pour qui](https://admova.fr/pour-qui/) — par taille d’entreprise, budget adaptable, couverture francophone
+- [Secteurs](https://admova.fr/secteurs/) — rayon de diffusion secteur par secteur
+- [Commerce & Retail](https://admova.fr/secteur-commerce/) · [Automobile](https://admova.fr/secteur-automobile/) · [Immobilier](https://admova.fr/secteur-immobilier/) · [Restauration](https://admova.fr/secteur-restauration/) · [Santé](https://admova.fr/secteur-sante/) · [Hôtellerie](https://admova.fr/secteur-hotellerie/) · [Services & B2B](https://admova.fr/secteur-services/)
+- [Applications partenaires](https://admova.fr/applications-partenaires/) — catalogue de l’inventaire
+- [Questions fréquentes](https://admova.fr/faq/) — géofencing, rayons, inventaire, TV connectée, délais, mesure
+- [Témoignages](https://admova.fr/temoignages/) — enseignes clientes et campagnes
+- [À propos](https://admova.fr/a-propos/) — HOLOPRO Média, histoire, équipe
+- [Nous contacter](https://admova.fr/rendez-vous/) — étude de zone gratuite, réponse sous 24 h
+- [Mentions légales](https://admova.fr/mentions-legales/)
+- [Politique de confidentialité](https://admova.fr/confidentialite/)
 
 ## Ressources
 
-- [Ressources — guides et analyses](https://admova.fr/ressources)
-- [Zone de chalandise : définition et usage en publicité](https://admova.fr/zone-de-chalandise-definition) : Qu’est-ce qu’une zone de chalandise ? Comment l’exploiter pour cibler vos campagnes publicitaires locales ? Définition, rayons et applications.
-- [Publicité géolocalisée immobilier : couvrir chaque quartier](https://admova.fr/publicite-geolocalisee-agence-immobiliere) : La publicité géolocalisée permet aux agences immobilières de cibler précisément chaque quartier avec des annonces adaptées au rayon d’action local.
-- [Publicité géolocalisée restaurant : capter les clients à midi](https://admova.fr/publicite-geolocalisee-restaurant) : La publicité géolocalisée restaurant permet de toucher les consommateurs à l’heure du déjeuner dans un rayon de 500 m à 2 km. Ciblage GPS au mètre près.
-- [Geofence automobile : pourquoi un rayon large est indispensable](https://admova.fr/geofence-concession-automobile) : Pour une concession automobile, le geofence exige un rayon de 15 à 30 km. Explications sur la zone de chalandise et la mesure des visites.
-- [Notoriété locale et premium : TV connectée et mobile plein écran](https://admova.fr/notoriete-locale-image-de-marque) : Développez votre notoriété locale et votre image premium grâce à la TV connectée et au format plein écran mobile géolocalisé.
-- [Ciblage précis : GPS, IP, code postal, quelle méthode choisir ?](https://admova.fr/ciblage-precis-publicite-mobile) : GPS, adresse IP ou code postal : trois méthodes de ciblage géographique aux performances très différentes. Comparatif factuel pour la publicité mobile.
-- [Publicité TV connectée : le marché français en 2026](https://admova.fr/marche-tv-connectee-2026) : La publicité TV connectée atteint 961 M€ en France en 2026 (+24,7 %), pendant que la TV linéaire recule de 7,9 %. Ce que ces chiffres changent pour une enseigne.
-- [Géofencing, géociblage, géolocalisation : quelles différences ?](https://admova.fr/geofencing-geociblage-geolocalisation) : Géolocalisation, géociblage, géofencing, géo-repérage : quatre termes souvent confondus. Leur définition, leurs différences, et ce qu’ils changent pour une campagne publicitaire.
-- [Quel rayon de diffusion choisir selon votre secteur ?](https://admova.fr/rayon-de-diffusion-par-secteur) : 500 m pour une boulangerie, 30 km pour une concession : le bon rayon de diffusion dépend de la distance que vos clients acceptent de parcourir. Les repères par secteur.
-- [TV connectée ou TV linéaire : le comparatif pour une enseigne](https://admova.fr/tv-connectee-ou-tv-lineaire) : Ciblage, budget d’entrée, mesure, audience : le comparatif entre la publicité en TV connectée et la publicité en TV linéaire classique, pour une enseigne à ancrage local.
-- [Déployer une campagne géolocalisée sur un réseau de franchises](https://admova.fr/campagne-reseau-franchises) : Un plan média, 10, 100 ou 1 000 points de vente : la méthode pour déployer une campagne géolocalisée sur un réseau de franchises, avec un reporting par site.
-- [Publicité interstitielle mobile : pourquoi le plein écran marque les esprits](https://admova.fr/publicite-interstitielle-mobile) : L’interstitiel occupe tout l’écran du smartphone pendant quelques secondes, entre deux actions dans une application. Pourquoi ce format est plus mémorisé que la bannière.
+- [Ressources — guides et analyses](https://admova.fr/ressources/)
+- [Zone de chalandise : définition et usage en publicité](https://admova.fr/zone-de-chalandise-definition/) : Qu’est-ce qu’une zone de chalandise ? Comment l’exploiter pour cibler vos campagnes publicitaires locales ? Définition, rayons et applications.
+- [Publicité géolocalisée immobilier : couvrir chaque quartier](https://admova.fr/publicite-geolocalisee-agence-immobiliere/) : La publicité géolocalisée permet aux agences immobilières de cibler précisément chaque quartier avec des annonces adaptées au rayon d’action local.
+- [Publicité géolocalisée restaurant : capter les clients à midi](https://admova.fr/publicite-geolocalisee-restaurant/) : La publicité géolocalisée restaurant permet de toucher les consommateurs à l’heure du déjeuner dans un rayon de 500 m à 2 km. Ciblage GPS au mètre près.
+- [Geofence automobile : pourquoi un rayon large est indispensable](https://admova.fr/geofence-concession-automobile/) : Pour une concession automobile, le geofence exige un rayon de 15 à 30 km. Explications sur la zone de chalandise et la mesure des visites.
+- [Notoriété locale et premium : TV connectée et mobile plein écran](https://admova.fr/notoriete-locale-image-de-marque/) : Développez votre notoriété locale et votre image premium grâce à la TV connectée et au format plein écran mobile géolocalisé.
+- [Ciblage précis : GPS, IP, code postal, quelle méthode choisir ?](https://admova.fr/ciblage-precis-publicite-mobile/) : GPS, adresse IP ou code postal : trois méthodes de ciblage géographique aux performances très différentes. Comparatif factuel pour la publicité mobile.
+- [Publicité TV connectée : le marché français en 2026](https://admova.fr/marche-tv-connectee-2026/) : La publicité TV connectée atteint 961 M€ en France en 2026 (+24,7 %), pendant que la TV linéaire recule de 7,9 %. Ce que ces chiffres changent pour une enseigne.
+- [Géofencing, géociblage, géolocalisation : quelles différences ?](https://admova.fr/geofencing-geociblage-geolocalisation/) : Géolocalisation, géociblage, géofencing, géo-repérage : quatre termes souvent confondus. Leur définition, leurs différences, et ce qu’ils changent pour une campagne publicitaire.
+- [Quel rayon de diffusion choisir selon votre secteur ?](https://admova.fr/rayon-de-diffusion-par-secteur/) : 500 m pour une boulangerie, 30 km pour une concession : le bon rayon de diffusion dépend de la distance que vos clients acceptent de parcourir. Les repères par secteur.
+- [TV connectée ou TV linéaire : le comparatif pour une enseigne](https://admova.fr/tv-connectee-ou-tv-lineaire/) : Ciblage, budget d’entrée, mesure, audience : le comparatif entre la publicité en TV connectée et la publicité en TV linéaire classique, pour une enseigne à ancrage local.
+- [Déployer une campagne géolocalisée sur un réseau de franchises](https://admova.fr/campagne-reseau-franchises/) : Un plan média, 10, 100 ou 1 000 points de vente : la méthode pour déployer une campagne géolocalisée sur un réseau de franchises, avec un reporting par site.
+- [Publicité interstitielle mobile : pourquoi le plein écran marque les esprits](https://admova.fr/publicite-interstitielle-mobile/) : L’interstitiel occupe tout l’écran du smartphone pendant quelques secondes, entre deux actions dans une application. Pourquoi ce format est plus mémorisé que la bannière.
 
 ## Origine
 
