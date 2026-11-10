@@ -176,10 +176,22 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
   @keyframes heroDrift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
   @keyframes pulseDot { 0%, 100% { box-shadow: 0 0 0 0 rgba(216,90,26,0.5); opacity: 1; } 50% { box-shadow: 0 0 0 6px rgba(216,90,26,0); opacity: 0.7; } }
   [data-herobg] { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
-  [data-herobg] > * { translate: 0 var(--hpy, 0px); }
+  [data-herobg] > * { translate: 0 calc(var(--hpy, 0px) * var(--hk, 1)); }
+  [data-herobg] { opacity: var(--hbg, 0); }
+  [data-herobg] .wash { position: absolute; inset: 0; background: linear-gradient(180deg,#FDF0E8 0%,#FEF7F1 34%,#FFFBF8 62%,#ffffff 100%); --hk: 0; }
+  @media (prefers-reduced-motion: reduce) { [data-herobg] { opacity: 1; } }
+  /* fond immobile au repos : il ne bouge qu'au défilement */
+  [data-herobg] .ring, [data-herobg] .glow, [data-herobg] .dot { animation: none !important; }
+  [data-herobg] .sweep { display: none; }
+  [data-herobg] .glow { opacity: 0.75; --hk: 0.35; }
+  [data-herobg] .ring { --hk: 0.6; }
+  [data-herobg] .ring.r1 { transform: translate(-50%,-50%) scale(0.34); opacity: 0.55; }
+  [data-herobg] .ring.r2 { transform: translate(-50%,-50%) scale(0.58); opacity: 0.38; --hk: 0.8; }
+  [data-herobg] .ring.r3 { transform: translate(-50%,-50%) scale(0.84); opacity: 0.22; --hk: 1; }
+  [data-herobg] .dot { --hk: 1.35; }
   [data-herobg] .ring { position: absolute; left: 50%; top: 300px; width: 1180px; height: 1180px; border: 1px solid rgba(216,90,26,0.30); border-radius: 9999px; transform: translate(-50%,-50%) scale(0.18); animation: heroRing 7s cubic-bezier(0.22,0.61,0.36,1) infinite; }
-  [data-herobg] .ring:nth-child(2) { animation-delay: 2.33s; }
-  [data-herobg] .ring:nth-child(3) { animation-delay: 4.66s; }
+  [data-herobg] .ring.r2 { animation-delay: 2.33s; }
+  [data-herobg] .ring.r3 { animation-delay: 4.66s; }
   [data-herobg] .glow { position: absolute; left: 50%; top: 300px; width: 900px; height: 700px; background: radial-gradient(50% 50% at 50% 50%, rgba(216,90,26,0.16) 0%, rgba(216,90,26,0.06) 42%, rgba(216,90,26,0) 72%); transform: translate(-50%,-50%); animation: heroGlow 9s ease-in-out infinite; }
   [data-herobg] .sweep { position: absolute; left: 0; right: 0; top: 40px; height: 1px; background: linear-gradient(90deg, rgba(216,90,26,0) 0%, rgba(216,90,26,0.55) 50%, rgba(216,90,26,0) 100%); animation: heroSweep 6s cubic-bezier(0.4,0,0.2,1) infinite; }
   [data-herobg] .dot { position: absolute; width: 5px; height: 5px; border-radius: 9999px; background: #D85A1A; opacity: 0.34; animation: heroDrift 5.5s ease-in-out infinite; }
@@ -741,7 +753,7 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
 </helmet>
 <div style="min-height:100vh;background:#ffffff;color:#5B6371;font-family:Inter,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden">
 
-<div data-navwrap="" style="position:sticky;top:0;z-index:50;padding:16px 20px 8px;display:flex;justify-content:center;pointer-events:none;background:#FDF0E8">
+<div data-navwrap="" style="position:sticky;top:0;z-index:50;padding:16px 20px 8px;display:flex;justify-content:center;pointer-events:none;background:rgb(253,240,232);background:color-mix(in srgb, #FDF0E8 calc(var(--hbg, 0) * 100%), #ffffff)">
   <div data-navinner="" style="pointer-events:auto;width:100%;max-width:1200px;background:#ffffff;border:1px solid #EFF0F2;border-radius:9999px;box-shadow:0 8px 28px rgba(10,10,10,0.07);height:62px;padding:0 12px 0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px">
     <a href="/" style="display:flex;align-items:center;flex:none"><img src="/assets/logo-admova-web.png" alt="admova" style="height:18px;width:auto;display:block"></a>
     <nav aria-label="Navigation principale" data-r="navmenu" style="display:flex;align-items:center;gap:26px">
@@ -775,12 +787,13 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
 
 <main id="contenu">
 
-<section id="hero" style="position:relative;padding:28px 20px 0;background:linear-gradient(180deg,#FDF0E8 0%,#FEF7F1 34%,#FFFBF8 62%,#ffffff 100%)">
+<section id="hero" style="position:relative;padding:28px 20px 0;background:#ffffff">
   <div data-herobg="" aria-hidden="true">
+    <span class="wash"></span>
     <span class="glow"></span>
-    <span class="ring"></span>
-    <span class="ring"></span>
-    <span class="ring"></span>
+    <span class="ring r1"></span>
+    <span class="ring r2"></span>
+    <span class="ring r3"></span>
     <span class="sweep"></span>
     <span class="dot" style="left:16%;top:186px"></span>
     <span class="dot" style="left:82%;top:150px;animation-delay:1.4s"></span>
@@ -1173,16 +1186,20 @@ class Component extends DCLogic {
   ensureHeroParallax() {
     if (window.__admovaHeroParallax) return;
     window.__admovaHeroParallax = true;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    let ticking = false;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { const n = document.querySelector('[data-navwrap]'); if (n) n.style.setProperty('--hbg', '1'); return; }
     const apply = () => {
-      ticking = false;
       const bg = document.querySelector('[data-herobg]');
       if (!bg) return;
-      const y = Math.min(window.scrollY || 0, 900);
-      bg.style.setProperty('--hpy', (y * 0.32).toFixed(1) + 'px');
+      const hero = document.getElementById('hero');
+      const y = Math.max(0, Math.min(hero ? -hero.getBoundingClientRect().top : (window.scrollY || 0), 900));
+      bg.style.setProperty('--hpy', (y * 0.4).toFixed(1) + 'px');
+      const k = Math.min(1, y / 320).toFixed(3);
+      bg.style.setProperty('--hbg', k);
+      const nav = document.querySelector('[data-navwrap]');
+      if (nav) nav.style.setProperty('--hbg', k);
     };
-    window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(apply); } }, { passive: true });
+    document.addEventListener('scroll', apply, { passive: true, capture: true });
+    window.addEventListener('resize', apply, { passive: true });
     apply();
   }
 
