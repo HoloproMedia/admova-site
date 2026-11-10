@@ -14,10 +14,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/support.js"></script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTCJ7G4B"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <x-dc>
 <helmet>
 <meta name="description" content="Géociblage publicitaire au mètre près : votre publicité sur 1 600+ applications mobiles et en TV connectée, uniquement dans votre zone. Géofencing, ciblage précis, image de marque premium et notoriété. Visuel inclus, en ligne en 48 h.">
@@ -661,6 +657,71 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
     [data-stepnav] button { width: 100%; min-height: 54px; justify-content: center; }
   }
   @media (prefers-reduced-motion: reduce) { [data-step-panel] { animation: none !important; } [data-seg] { transition: none; } }
+
+  /* ---- section diffusion : icônes Lucide en masque ---- */
+  [data-dico] { display: block; width: 22px; height: 22px; background: #D85A1A; }
+  [data-dico="mobile"] { -webkit-mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiA+IDxyZWN0IHdpZHRoPSIxNCIgaGVpZ2h0PSIyMCIgeD0iNSIgeT0iMiIgcng9IjIiIHJ5PSIyIiAvPiA8cGF0aCBkPSJNMTIgMThoLjAxIiAvPiA8L3N2Zz4=") center / contain no-repeat; mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiA+IDxyZWN0IHdpZHRoPSIxNCIgaGVpZ2h0PSIyMCIgeD0iNSIgeT0iMiIgcng9IjIiIHJ5PSIyIiAvPiA8cGF0aCBkPSJNMTIgMThoLjAxIiAvPiA8L3N2Zz4=") center / contain no-repeat; }
+  [data-dico="tv"] { -webkit-mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiA+IDxwYXRoIGQ9Ik03IDIxaDEwIiAvPiA8cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHg9IjIiIHk9IjMiIHJ4PSIyIiAvPiA8L3N2Zz4=") center / contain no-repeat; mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiA+IDxwYXRoIGQ9Ik03IDIxaDEwIiAvPiA8cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMTQiIHg9IjIiIHk9IjMiIHJ4PSIyIiAvPiA8L3N2Zz4=") center / contain no-repeat; }
+  [data-dico="stream"] { -webkit-mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiA+IDxwYXRoIGQ9Ik0yMC4yIDYgMyAxMWwtLjktMi40Yy0uMy0xLjEuMy0yLjIgMS4zLTIuNWwxMy41LTRjMS4xLS4zIDIuMi4zIDIuNSAxLjNaIiAvPiA8cGF0aCBkPSJtNi4yIDUuMyAzLjEgMy45IiAvPiA8cGF0aCBkPSJtMTIuNCAzLjQgMy4xIDQiIC8+IDxwYXRoIGQ9Ik0zIDExaDE4djhhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJaIiAvPiA8L3N2Zz4=") center / contain no-repeat; mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiA+IDxwYXRoIGQ9Ik0yMC4yIDYgMyAxMWwtLjktMi40Yy0uMy0xLjEuMy0yLjIgMS4zLTIuNWwxMy41LTRjMS4xLS4zIDIuMi4zIDIuNSAxLjNaIiAvPiA8cGF0aCBkPSJtNi4yIDUuMyAzLjEgMy45IiAvPiA8cGF0aCBkPSJtMTIuNCAzLjQgMy4xIDQiIC8+IDxwYXRoIGQ9Ik0zIDExaDE4djhhMiAyIDAgMCAxLTIgMkg1YTIgMiAwIDAgMS0yLTJaIiAvPiA8L3N2Zz4=") center / contain no-repeat; }
+
+  /* ---- section diffusion : typographie cinétique ---- */
+  @keyframes dfL { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
+  @keyframes dfR { from { transform: translate3d(-50%,0,0); } to { transform: translate3d(0,0,0); } }
+  @keyframes dfLive { 0% { box-shadow: 0 0 0 0 rgba(216,90,26,0.6); } 70% { box-shadow: 0 0 0 8px rgba(216,90,26,0); } 100% { box-shadow: 0 0 0 0 rgba(216,90,26,0); } }
+  @keyframes kMark { from { background-size: 0% 0.34em; } to { background-size: 100% 0.34em; } }
+  [data-dlive] { width: 7px; height: 7px; border-radius: 9999px; background: #E8B21A; animation: dfLive 2s cubic-bezier(0.22,0.61,0.36,1) infinite; }
+  [data-kmark] { color: #D85A1A; background-image: linear-gradient(#FDE3CF, #FDE3CF); background-repeat: no-repeat; background-position: 0 88%; background-size: 0% 0.34em; padding: 0 0.04em; }
+  [data-in] [data-kmark], [data-kmark][data-in], [data-in][data-r="h2"] [data-kmark] { animation: kMark 900ms cubic-bezier(0.22,0.61,0.36,1) 420ms forwards; }
+  [data-klane] { padding: 0; }
+  [data-ktag] { display: flex; align-items: center; justify-content: center; gap: 16px; width: 100%; max-width: 1200px; box-sizing: border-box; margin: 0 auto 10px; padding: 0 32px; font-size: 40px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; color: #0A0A0A; text-align: center; }
+  [data-ktag]::before { content: attr(data-n); flex: none; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px; font-weight: 600; letter-spacing: 0; color: #ffffff; background: #D85A1A; border-radius: 9999px; padding: 6px 11px; line-height: 1; }
+  [data-kico] { flex: none; width: 56px; height: 56px; border-radius: 14px; background: #FDF0E8; border: 1px solid #F0DDD0; display: flex; align-items: center; justify-content: center; }
+  [data-ktag] [data-dico] { width: 26px; height: 26px; background: #D85A1A; }
+  [data-kmask] { overflow: hidden; padding: 22px 0 10px; border-top: 1px solid #F1EADF; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%); }
+  [data-ktrack] { display: flex; width: max-content; animation: dfL var(--dur, 40s) linear infinite; will-change: transform; }
+  [data-ktrack][data-dir="r"] { animation-name: dfR; }
+  [data-kgroup] { display: flex; align-items: center; gap: 28px; padding-right: 28px; flex: none; }
+  [data-kword] { flex: none; font-size: 68px; font-weight: 800; line-height: 1; letter-spacing: -2.4px; color: #0A0A0A; white-space: nowrap; transition: color 200ms ease, -webkit-text-stroke-color 200ms ease; }
+  [data-kstyle="outline"] [data-kword] { color: transparent; -webkit-text-stroke: 1.6px #0A0A0A; }
+  [data-kdot] { flex: none; width: 14px; height: 14px; border-radius: 4px; background: #D85A1A; transform: rotate(45deg); }
+  [data-kstyle="outline"] [data-kdot] { background: #E8B21A; }
+  [data-kchip] { flex: none; display: inline-flex; align-items: center; background: #D85A1A; color: #ffffff; border-radius: 9999px; padding: 14px 24px; font-size: 22px; font-weight: 800; letter-spacing: -0.4px; white-space: nowrap; transform: rotate(-3deg); }
+  [data-kstyle="outline"] [data-kchip] { background: #E8B21A; color: #0A0A0A; transform: rotate(3deg); }
+  [data-klane]:hover [data-ktrack] { animation-play-state: paused; }
+  [data-klane] [data-kword]:hover { color: #D85A1A; -webkit-text-stroke-color: #D85A1A; }
+  @media (max-width: 860px) {
+    [data-r2="khead"] { grid-template-columns: 1fr !important; gap: 18px !important; margin-bottom: 40px !important; }
+    #diffusion h2[data-r="h2"] { font-size: 42px !important; letter-spacing: -1.6px !important; }
+    #diffusion { padding: 72px 0 80px !important; }
+    [data-ktag] { padding: 0 16px; font-size: 26px; gap: 10px; letter-spacing: -0.8px; }
+    [data-ktag]::before { font-size: 12px; padding: 5px 9px; }
+    [data-kico] { width: 42px; height: 42px; border-radius: 11px; }
+    [data-ktag] [data-dico] { width: 20px; height: 20px; }
+    [data-kword] { font-size: 40px; letter-spacing: -1.3px; }
+    [data-kgroup] { gap: 18px; padding-right: 18px; }
+    [data-kdot] { width: 10px; height: 10px; border-radius: 3px; }
+    [data-kchip] { font-size: 16px; padding: 10px 17px; }
+    [data-kstyle="outline"] [data-kword] { -webkit-text-stroke-width: 1.2px; }
+  }
+  @media (max-width: 430px) {
+    #diffusion h2[data-r="h2"] { font-size: 34px !important; }
+    [data-kword] { font-size: 32px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-ktrack] { animation: none; width: auto; }
+    [data-kgroup] { flex-wrap: wrap; row-gap: 14px; padding: 0 20px; }
+    [data-kgroup][aria-hidden="true"] { display: none; }
+    [data-kmask] { -webkit-mask-image: none; mask-image: none; }
+    [data-dlive], [data-kmark] { animation: none !important; }
+    [data-kmark] { background-size: 100% 0.34em; }
+  }
+
+  @media (max-width: 1040px) and (min-width: 861px) {
+    #diffusion h2[data-r="h2"] { font-size: 52px !important; letter-spacing: -2.2px !important; }
+    [data-ktag] { font-size: 30px; letter-spacing: -1px; gap: 12px; }
+    [data-kico] { width: 48px; height: 48px; border-radius: 12px; }
+    [data-ktag] [data-dico] { width: 22px; height: 22px; }
+  }
 </style>
 </helmet>
 <div style="min-height:100vh;background:#ffffff;color:#5B6371;font-family:Inter,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden">
@@ -796,6 +857,36 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
       <sc-for list="{{ marquee }}" as="m2" hint-placeholder-count="12">
         <span>{{ m2 }}</span>
       </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="diffusion" style="position:relative;padding:104px 0 112px;background:#ffffff;overflow:hidden">
+  <div data-r="pad" style="max-width:1200px;margin:0 auto 56px;padding:0 32px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,0.8fr);gap:40px;align-items:end" data-r2="khead">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <span data-reveal="" style="align-self:flex-start;display:inline-flex;align-items:center;gap:9px;background:#0A0A0A;border-radius:9999px;padding:8px 15px;font-size:12px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#ffffff"><span data-dlive="" aria-hidden="true"></span>En diffusion</span>
+      <h2 data-reveal="" data-r="h2" style="--d:80ms;margin:0;font-size:64px;font-weight:800;line-height:0.98;letter-spacing:-2.8px;color:#0A0A0A">Là où vos clients <span data-kmark="">regardent.</span></h2>
+    </div>
+    <p data-reveal="" style="--d:160ms;margin:0;font-size:17px;line-height:1.65;color:#5B6371;max-width:40ch">Les applis qu’ils ouvrent, les chaînes qu’ils regardent, les plateformes qu’ils enchaînent. Votre pub s’y glisse — uniquement dans votre zone.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:52px">
+    <div data-reveal="" data-klane="" data-kstyle="fill" style="--d:0ms;position:relative">
+      <span data-ktag="" data-n="01"><span data-kico=""><span data-dico="mobile" aria-hidden="true"></span></span>Applications mobiles</span>
+      <div data-kmask="" role="img" aria-label="Applications mobiles : Leboncoin, L’Équipe, Météo-France, BFM, Vinted, Le Figaro, et bien plus de 1 600 applis">
+        <div data-ktrack="" data-dir="l" style="--dur:38s"><div data-kgroup=""><span data-kword="">Leboncoin</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">L’Équipe</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Météo-France</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">BFM</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Vinted</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Le Figaro</span><span data-kdot="" aria-hidden="true"></span><span data-kchip="">+ 1 600 applis</span><span data-kdot="" aria-hidden="true"></span></div><div data-kgroup="" aria-hidden="true"><span data-kword="">Leboncoin</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">L’Équipe</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Météo-France</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">BFM</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Vinted</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Le Figaro</span><span data-kdot="" aria-hidden="true"></span><span data-kchip="">+ 1 600 applis</span><span data-kdot="" aria-hidden="true"></span></div></div>
+      </div>
+    </div>
+    <div data-reveal="" data-klane="" data-kstyle="outline" style="--d:120ms;position:relative">
+      <span data-ktag="" data-n="02"><span data-kico=""><span data-dico="tv" aria-hidden="true"></span></span>Chaînes TV et replay</span>
+      <div data-kmask="" role="img" aria-label="Chaînes TV et replay : TF1+, M6+, W9, BFMTV, Canal+, RMC, et bien plus de de chaînes">
+        <div data-ktrack="" data-dir="r" style="--dur:44s"><div data-kgroup=""><span data-kword="">TF1+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">M6+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">W9</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">BFMTV</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Canal+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">RMC</span><span data-kdot="" aria-hidden="true"></span><span data-kchip="">+ de chaînes</span><span data-kdot="" aria-hidden="true"></span></div><div data-kgroup="" aria-hidden="true"><span data-kword="">TF1+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">M6+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">W9</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">BFMTV</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Canal+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">RMC</span><span data-kdot="" aria-hidden="true"></span><span data-kchip="">+ de chaînes</span><span data-kdot="" aria-hidden="true"></span></div></div>
+      </div>
+    </div>
+    <div data-reveal="" data-klane="" data-kstyle="fill" style="--d:240ms;position:relative">
+      <span data-ktag="" data-n="03"><span data-kico=""><span data-dico="stream" aria-hidden="true"></span></span>Streaming</span>
+      <div data-kmask="" role="img" aria-label="Streaming : Netflix, Disney+, Molotov, et bien plus de de plateformes">
+        <div data-ktrack="" data-dir="l" style="--dur:30s"><div data-kgroup=""><span data-kword="">Netflix</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Disney+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Molotov</span><span data-kdot="" aria-hidden="true"></span><span data-kchip="">+ de plateformes</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Netflix</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Disney+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Molotov</span><span data-kdot="" aria-hidden="true"></span><span data-kchip="">+ de plateformes</span><span data-kdot="" aria-hidden="true"></span></div><div data-kgroup="" aria-hidden="true"><span data-kword="">Netflix</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Disney+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Molotov</span><span data-kdot="" aria-hidden="true"></span><span data-kchip="">+ de plateformes</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Netflix</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Disney+</span><span data-kdot="" aria-hidden="true"></span><span data-kword="">Molotov</span><span data-kdot="" aria-hidden="true"></span><span data-kchip="">+ de plateformes</span><span data-kdot="" aria-hidden="true"></span></div></div>
+      </div>
     </div>
   </div>
 </section>
