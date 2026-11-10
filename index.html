@@ -722,6 +722,13 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
     [data-kico] { width: 48px; height: 48px; border-radius: 12px; }
     [data-ktag] [data-dico] { width: 22px; height: 22px; }
   }
+
+  /* ---- liste des enseignes, fixe et discrète ---- */
+  [data-ltile] { display: inline-flex; align-items: center; font-size: 13.5px; font-weight: 600; letter-spacing: -0.1px; line-height: 1.3; color: #807D75; white-space: nowrap; transition: color 140ms ease; }
+  [data-ltile]:not(:last-child)::after { content: ""; width: 3px; height: 3px; border-radius: 9999px; background: #D9D3C7; margin: 0 14px; }
+  [data-ltile]:hover { color: #0A0A0A; }
+  [data-ltile]:last-child { color: #B8480F; }
+  @media (max-width: 560px) { [data-ltile] { font-size: 12.5px; } [data-ltile]:not(:last-child)::after { margin: 0 10px; } }
 </style>
 </helmet>
 <div style="min-height:100vh;background:#ffffff;color:#5B6371;font-family:Inter,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden">
@@ -845,19 +852,14 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
   </div>
 </section>
 
-<section id="preuve" style="padding:0 0 64px">
-  <div data-r="pad" style="max-width:1200px;margin:0 auto 22px;padding:0 32px">
-    <p data-reveal="" style="margin:0;font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#5B6371">120+ enseignes clientes, tous secteurs</p>
-  </div>
-  <div data-mwrap="" style="overflow:hidden;mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%)">
-    <div data-marquee="" aria-hidden="true">
-      <sc-for list="{{ marquee }}" as="m1" hint-placeholder-count="12">
-        <span>{{ m1 }}</span>
+<section id="preuve" style="padding:4px 0 48px">
+  <div data-r="pad" style="max-width:1200px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:14px">
+    <p data-reveal="" style="margin:0;text-align:center;font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#5B6371">120+ enseignes clientes, tous secteurs</p>
+    <ul data-reveal="" data-lwall="" aria-label="Enseignes clientes d’Admova" style="--d:80ms;list-style:none;margin:0 auto;padding:0;max-width:980px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;row-gap:10px">
+      <sc-for list="{{ marquee }}" as="m1" hint-placeholder-count="18">
+        <li data-ltile="">{{ m1 }}</li>
       </sc-for>
-      <sc-for list="{{ marquee }}" as="m2" hint-placeholder-count="12">
-        <span>{{ m2 }}</span>
-      </sc-for>
-    </div>
+    </ul>
   </div>
 </section>
 
@@ -1490,7 +1492,7 @@ class Component extends DCLogic {
       volOpen: this.state.volOpen,
       rewindVid: () => this.rewindVid(),
       icon16: 16,
-      marquee: ['Burger King', "McDonald's", 'KFC', 'E.Leclerc', 'BMW', 'AXA', 'Pitaya', 'Fitness Park', 'Or du Siècle', 'Le Paradis du Fruit', 'Crédit Agricole', 'MMA', 'Easy Cash', 'Century 21', 'Guy Hoquet', 'Norauto'],
+      marquee: ['Burger King', "McDonald's", 'KFC', 'E.Leclerc', 'BMW', 'AXA', 'Pitaya', 'Fitness Park', 'Or du Siècle', 'Le Paradis du Fruit', 'Crédit Agricole', 'MMA', 'Easy Cash', 'Century 21', 'Guy Hoquet', 'Norauto', 'On Air Fitness', 'Et 100+ autres'],
       sizes: [
         { delay: '0ms', href: '/tpe-pme/', title: 'TPE', body: 'Un point de vente, une zone. Tout inclus.' },
         { delay: '70ms', href: '/tpe-pme/', title: 'PME', body: 'Plusieurs villes, un seul plan média.' },
