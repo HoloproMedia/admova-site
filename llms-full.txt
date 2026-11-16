@@ -101,6 +101,7 @@ Univers couverts : annonces, météo, presse quotidienne, actualités, sport, ra
 ## Ressources
 
 - [Ressources — guides et analyses](https://admova.fr/ressources/)
+- [Drive-to-store : mesurer l’impact sur la fréquentation physique](https://admova.fr/mesurer-campagne-drive-to-store/) : Comment évaluer l’efficacité d’une campagne mobile drive-to-store sur la fréquentation d’un point de vente ? Méthodes de mesure et critères clés.
 - [Zone de chalandise : définition et usage en publicité](https://admova.fr/zone-de-chalandise-definition/) : Qu’est-ce qu’une zone de chalandise ? Comment l’exploiter pour cibler vos campagnes publicitaires locales ? Définition, rayons et applications.
 - [Publicité géolocalisée immobilier : couvrir chaque quartier](https://admova.fr/publicite-geolocalisee-agence-immobiliere/) : La publicité géolocalisée permet aux agences immobilières de cibler précisément chaque quartier avec des annonces adaptées au rayon d’action local.
 - [Publicité géolocalisée restaurant : capter les clients à midi](https://admova.fr/publicite-geolocalisee-restaurant/) : La publicité géolocalisée restaurant permet de toucher les consommateurs à l’heure du déjeuner dans un rayon de 500 m à 2 km. Ciblage GPS au mètre près.
