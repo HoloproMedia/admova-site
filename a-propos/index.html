@@ -432,12 +432,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <section data-r="pad" style="padding:0 32px 88px">
   <div data-reveal="" data-stats="" data-r="four" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#EFF0F2;border:1px solid #EFF0F2;border-radius:24px;overflow:hidden">
-    <sc-for list="{{ counters }}" as="c" hint-placeholder-count="4">
-      <div data-step="" style="--d:{{ c.delay }};background:#ffffff;padding:32px 26px;display:flex;flex-direction:column;gap:7px">
-        <p style="margin:0;font-size:44px;font-weight:800;line-height:1;letter-spacing:-1.8px;color:#0A0A0A"><span data-count="" data-to="{{ c.to }}" data-suffix="{{ c.suffix }}">{{ c.seed }}</span></p>
-        <p style="margin:0;font-size:14px;line-height:1.5;color:#5B6371">{{ c.label }}</p>
+    
+      <div data-step="" style="--d:0ms;background:#ffffff;padding:32px 26px;display:flex;flex-direction:column;gap:7px">
+        <p style="margin:0;font-size:44px;font-weight:800;line-height:1;letter-spacing:-1.8px;color:#0A0A0A"><span data-count="" data-to="2019" data-suffix="">2019</span></p>
+        <p style="margin:0;font-size:14px;line-height:1.5;color:#5B6371">année de création, à Chambéry</p>
       </div>
-    </sc-for>
+    
+      <div data-step="" style="--d:90ms;background:#ffffff;padding:32px 26px;display:flex;flex-direction:column;gap:7px">
+        <p style="margin:0;font-size:44px;font-weight:800;line-height:1;letter-spacing:-1.8px;color:#0A0A0A"><span data-count="" data-to="120" data-suffix="+">120+</span></p>
+        <p style="margin:0;font-size:14px;line-height:1.5;color:#5B6371">enseignes et commerces accompagnés</p>
+      </div>
+    
+      <div data-step="" style="--d:180ms;background:#ffffff;padding:32px 26px;display:flex;flex-direction:column;gap:7px">
+        <p style="margin:0;font-size:44px;font-weight:800;line-height:1;letter-spacing:-1.8px;color:#0A0A0A"><span data-count="" data-to="1600" data-suffix="+">1 600+</span></p>
+        <p style="margin:0;font-size:14px;line-height:1.5;color:#5B6371">applications partenaires</p>
+      </div>
+    
+      <div data-step="" style="--d:270ms;background:#ffffff;padding:32px 26px;display:flex;flex-direction:column;gap:7px">
+        <p style="margin:0;font-size:44px;font-weight:800;line-height:1;letter-spacing:-1.8px;color:#0A0A0A"><span data-count="" data-to="5" data-suffix="">5</span></p>
+        <p style="margin:0;font-size:14px;line-height:1.5;color:#5B6371">pays francophones couverts</p>
+      </div>
+    
   </div>
 </section>
 
@@ -450,16 +465,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div data-tl="" style="position:relative;padding-left:0">
       <span data-tlrail="" aria-hidden="true"><i></i></span>
-      <sc-for list="{{ chapters }}" as="ch" hint-placeholder-count="4">
+      
         <div data-chap="">
-          <span data-chapdot="">{{ ch.tag }}</span>
+          <span data-chapdot="">DOOH</span>
           <div data-chapbody="" style="display:flex;flex-direction:column;gap:12px;padding-top:6px">
-            <p style="margin:0;font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#B8480F">{{ ch.n }}</p>
-            <h3 style="margin:0;font-size:30px;font-weight:800;line-height:1.15;letter-spacing:-1px;color:#0A0A0A">{{ ch.title }}</h3>
-            <p style="margin:0;font-size:16px;line-height:1.75;color:#5B6371;max-width:66ch">{{ ch.body }}</p>
+            <p style="margin:0;font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#B8480F">2019</p>
+            <h3 style="margin:0;font-size:30px;font-weight:800;line-height:1.15;letter-spacing:-1px;color:#0A0A0A">L’écran en magasin.</h3>
+            <p style="margin:0;font-size:16px;line-height:1.75;color:#5B6371;max-width:66ch">HOLOPRO Média a commencé comme régie d’affichage digital en magasin — écrans DOOH dans les E.Leclerc, Intermarché, Super U et Carrefour de la région. On gérait des écrans, on diffusait des publicités locales.</p>
           </div>
         </div>
-      </sc-for>
+      
+        <div data-chap="">
+          <span data-chapdot="">Mobile</span>
+          <div data-chapbody="" style="display:flex;flex-direction:column;gap:12px;padding-top:6px">
+            <p style="margin:0;font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#B8480F">Le constat</p>
+            <h3 style="margin:0;font-size:30px;font-weight:800;line-height:1.15;letter-spacing:-1px;color:#0A0A0A">Le premier écran a changé de poche.</h3>
+            <p style="margin:0;font-size:16px;line-height:1.75;color:#5B6371;max-width:66ch">Très vite, on a réalisé que nos clients avaient un problème plus profond : ils voulaient toucher leurs clients partout, pas seulement devant une caisse de supermarché. Le smartphone était devenu le premier écran.</p>
+          </div>
+        </div>
+      
+        <div data-chap="">
+          <span data-chapdot="">1 600+ apps</span>
+          <div data-chapbody="" style="display:flex;flex-direction:column;gap:12px;padding-top:6px">
+            <p style="margin:0;font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#B8480F">Admova</p>
+            <h3 style="margin:0;font-size:30px;font-weight:800;line-height:1.15;letter-spacing:-1px;color:#0A0A0A">La zone de chalandise, au mètre près.</h3>
+            <p style="margin:0;font-size:16px;line-height:1.75;color:#5B6371;max-width:66ch">C’est de ce constat qu’est née Admova — une régie mobile géolocalisée qui permet à n’importe quelle entreprise de diffuser une publicité plein écran dans 1 600+ applications, uniquement auprès des personnes dans sa zone de chalandise réelle.</p>
+          </div>
+        </div>
+      
+        <div data-chap="">
+          <span data-chapdot="">Mobile + TV</span>
+          <div data-chapbody="" style="display:flex;flex-direction:column;gap:12px;padding-top:6px">
+            <p style="margin:0;font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#B8480F">Aujourd’hui</p>
+            <h3 style="margin:0;font-size:30px;font-weight:800;line-height:1.15;letter-spacing:-1px;color:#0A0A0A">Deux écrans, un seul ciblage.</h3>
+            <p style="margin:0;font-size:16px;line-height:1.75;color:#5B6371;max-width:66ch">Le mobile en mobilité, la TV connectée au salon — replay des grandes chaînes et chaînes gratuites en streaming. Même rayon, même précision, un seul plan média. Plus de 120 enseignes et commerces nous font confiance.</p>
+          </div>
+        </div>
+      
     </div>
   </div>
 </section>
@@ -470,12 +512,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <div data-mwrap="" style="overflow:hidden;mask-image:linear-gradient(90deg,transparent 0%,#000 9%,#000 91%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 9%,#000 91%,transparent 100%)">
     <div data-marquee="" aria-hidden="true">
-      <sc-for list="{{ brands }}" as="b" hint-placeholder-count="6">
-        <span>{{ b }}</span>
-      </sc-for>
-      <sc-for list="{{ brands }}" as="b2" hint-placeholder-count="6">
-        <span>{{ b2 }}</span>
-      </sc-for>
+      
+        <span>Burger King</span>
+      
+        <span>McDonald’s</span>
+      
+        <span>KFC</span>
+      
+        <span>E.Leclerc</span>
+      
+        <span>BMW</span>
+      
+        <span>AXA</span>
+      
+      
+        <span>Burger King</span>
+      
+        <span>McDonald’s</span>
+      
+        <span>KFC</span>
+      
+        <span>E.Leclerc</span>
+      
+        <span>BMW</span>
+      
+        <span>AXA</span>
+      
     </div>
   </div>
   <div data-r="pad" style="max-width:1200px;margin:26px auto 0;padding:0 32px">
@@ -490,15 +552,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <h2 id="solide" data-r="h2" style="margin:0;font-size:46px;font-weight:800;line-height:1.06;letter-spacing:-1.9px;color:#0A0A0A">Ce sur quoi vous vous appuyez.</h2>
     </div>
     <div data-reveal="" style="display:flex;flex-direction:column;border:1px solid #EFF0F2;border-radius:24px;background:#ffffff;box-shadow:0 10px 34px rgba(10,10,10,0.06);overflow:hidden">
-      <sc-for list="{{ solid }}" as="sd" hint-placeholder-count="4">
-        <div data-step="" style="--d:{{ sd.delay }};display:grid;grid-template-columns:230px 1fr;gap:28px;padding:26px 30px;border-top:1px solid #F1F2F4;align-items:center" data-r="split">
+      
+        <div data-step="" style="--d:0ms;display:grid;grid-template-columns:230px 1fr;gap:28px;padding:26px 30px;border-top:1px solid #F1F2F4;align-items:center" data-r="split">
           <div style="display:flex;flex-direction:column;gap:9px">
-            <span style="font-size:19px;font-weight:800;letter-spacing:-0.6px;color:#0A0A0A">{{ sd.k }}</span>
-            <span style="height:8px;background:#F1F2F4;border-radius:9999px;overflow:hidden"><span data-fill="" style="--fw:{{ sd.fw }};--bd:{{ sd.bd }};display:block;height:100%;background:#D85A1A;border-radius:9999px"></span></span>
+            <span style="font-size:19px;font-weight:800;letter-spacing:-0.6px;color:#0A0A0A">Depuis 2019</span>
+            <span style="height:8px;background:#F1F2F4;border-radius:9999px;overflow:hidden"><span data-fill="" style="--fw:100%;--bd:0ms;display:block;height:100%;background:#D85A1A;border-radius:9999px"></span></span>
           </div>
-          <p style="margin:0;font-size:16px;line-height:1.7;color:#5B6371">{{ sd.v }}</p>
+          <p style="margin:0;font-size:16px;line-height:1.7;color:#5B6371">Sept ans d’exploitation continue, du DOOH en magasin à la diffusion mobile et TV connectée.</p>
         </div>
-      </sc-for>
+      
+        <div data-step="" style="--d:90ms;display:grid;grid-template-columns:230px 1fr;gap:28px;padding:26px 30px;border-top:1px solid #F1F2F4;align-items:center" data-r="split">
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="font-size:19px;font-weight:800;letter-spacing:-0.6px;color:#0A0A0A">120+ enseignes</span>
+            <span style="height:8px;background:#F1F2F4;border-radius:9999px;overflow:hidden"><span data-fill="" style="--fw:82%;--bd:120ms;display:block;height:100%;background:#D85A1A;border-radius:9999px"></span></span>
+          </div>
+          <p style="margin:0;font-size:16px;line-height:1.7;color:#5B6371">Des grandes enseignes nationales aux commerces de quartier, tous secteurs.</p>
+        </div>
+      
+        <div data-step="" style="--d:180ms;display:grid;grid-template-columns:230px 1fr;gap:28px;padding:26px 30px;border-top:1px solid #F1F2F4;align-items:center" data-r="split">
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="font-size:19px;font-weight:800;letter-spacing:-0.6px;color:#0A0A0A">5 pays</span>
+            <span style="height:8px;background:#F1F2F4;border-radius:9999px;overflow:hidden"><span data-fill="" style="--fw:64%;--bd:240ms;display:block;height:100%;background:#D85A1A;border-radius:9999px"></span></span>
+          </div>
+          <p style="margin:0;font-size:16px;line-height:1.7;color:#5B6371">France, Belgique, Suisse, Luxembourg, Canada — tout le marché francophone.</p>
+        </div>
+      
+        <div data-step="" style="--d:270ms;display:grid;grid-template-columns:230px 1fr;gap:28px;padding:26px 30px;border-top:1px solid #F1F2F4;align-items:center" data-r="split">
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="font-size:19px;font-weight:800;letter-spacing:-0.6px;color:#0A0A0A">Simple et clair</span>
+            <span style="height:8px;background:#F1F2F4;border-radius:9999px;overflow:hidden"><span data-fill="" style="--fw:46%;--bd:360ms;display:block;height:100%;background:#D85A1A;border-radius:9999px"></span></span>
+          </div>
+          <p style="margin:0;font-size:16px;line-height:1.7;color:#5B6371">Nos clients restent parce que les chiffres suivent, pas parce qu’un contrat les retient.</p>
+        </div>
+      
     </div>
   </div>
 </section>
@@ -510,14 +596,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <h2 id="principes" data-r="h2" style="margin:0;font-size:46px;font-weight:800;line-height:1.06;letter-spacing:-1.9px;color:#0A0A0A">Trois règles, tenues depuis 2019.</h2>
     </div>
     <div data-reveal="" data-r="three" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-      <sc-for list="{{ principles }}" as="pr" hint-placeholder-count="3">
-        <div data-step="" data-tile="" style="--d:{{ pr.delay }};background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px;min-height:270px">
+      
+        <div data-step="" data-tile="" style="--d:0ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px;min-height:270px">
           <span data-sheen="" aria-hidden="true"></span>
-          <span style="position:relative;z-index:1;font-size:13px;font-weight:800;letter-spacing:0.06em;color:#B8480F">{{ pr.n }}</span>
-          <h3 style="position:relative;z-index:1;margin:0;font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-0.8px;color:#0A0A0A">{{ pr.title }}</h3>
-          <p style="position:relative;z-index:1;margin:0;font-size:15px;line-height:1.7;color:#5B6371">{{ pr.body }}</p>
+          <span style="position:relative;z-index:1;font-size:13px;font-weight:800;letter-spacing:0.06em;color:#B8480F">01</span>
+          <h3 style="position:relative;z-index:1;margin:0;font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-0.8px;color:#0A0A0A">La preuve avant la promesse.</h3>
+          <p style="position:relative;z-index:1;margin:0;font-size:15px;line-height:1.7;color:#5B6371">Chaque semaine, un rapport de vos performances réelles. Pas des projections — des données certifiées par des tiers indépendants.</p>
         </div>
-      </sc-for>
+      
+        <div data-step="" data-tile="" style="--d:110ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px;min-height:270px">
+          <span data-sheen="" aria-hidden="true"></span>
+          <span style="position:relative;z-index:1;font-size:13px;font-weight:800;letter-spacing:0.06em;color:#B8480F">02</span>
+          <h3 style="position:relative;z-index:1;margin:0;font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-0.8px;color:#0A0A0A">Accessible dès le premier euro.</h3>
+          <p style="position:relative;z-index:1;margin:0;font-size:15px;line-height:1.7;color:#5B6371">Les technologies de ciblage géographique précis étaient réservées aux grands groupes. Nous les rendons accessibles à toutes les entreprises.</p>
+        </div>
+      
+        <div data-step="" data-tile="" style="--d:220ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px;min-height:270px">
+          <span data-sheen="" aria-hidden="true"></span>
+          <span style="position:relative;z-index:1;font-size:13px;font-weight:800;letter-spacing:0.06em;color:#B8480F">03</span>
+          <h3 style="position:relative;z-index:1;margin:0;font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-0.8px;color:#0A0A0A">Indépendants, et nous y tenons.</h3>
+          <p style="position:relative;z-index:1;margin:0;font-size:15px;line-height:1.7;color:#5B6371">Régie française indépendante. Aucun inventaire privilégié pour des raisons capitalistiques : la recommandation suit votre géographie.</p>
+        </div>
+      
     </div>
   </div>
 </section>
@@ -530,17 +630,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p style="margin:0;font-size:16px;line-height:1.7;color:#5B6371">L’interlocuteur qui cadre votre zone est celui qui suit votre campagne et vous présente le bilan.</p>
     </div>
     <div data-reveal="" data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
-      <sc-for list="{{ founders }}" as="fo" hint-placeholder-count="2">
-        <div data-step="" data-tile="" data-founder="" style="--d:{{ fo.delay }};background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:18px;display:grid;grid-template-columns:168px 1fr;gap:24px;align-items:center">
+      
+        <div data-step="" data-tile="" data-founder="" style="--d:0ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:18px;display:grid;grid-template-columns:168px 1fr;gap:24px;align-items:center">
           <span data-sheen="" aria-hidden="true"></span>
-          <img src="{{ fo.photo }}" alt="{{ fo.alt }}" width="640" height="800" loading="lazy" decoding="async" style="position:relative;z-index:1;display:block;width:168px;height:210px;object-fit:cover;object-position:center 30%;border-radius:12px;background:#F5F6F7">
+          <img src="/assets/equipe-josselin-pajean.jpg" alt="Josselin Pajean, co-fondateur de HOLOPRO Média et d’Admova" width="640" height="800" loading="lazy" decoding="async" style="position:relative;z-index:1;display:block;width:168px;height:210px;object-fit:cover;object-position:center 30%;border-radius:12px;background:#F5F6F7">
           <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding-right:8px">
-            <p style="margin:0;font-size:24px;font-weight:800;letter-spacing:-0.8px;color:#0A0A0A">{{ fo.name }}</p>
-            <p style="margin:0;font-size:15px;line-height:1.55;color:#5B6371">{{ fo.role }}</p>
-            <a data-linkedin="" href="{{ fo.linkedin }}" target="_blank" rel="noopener" aria-label="{{ fo.aria }}" style="margin-top:12px;display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px 0 12px;border:1px solid #E8E4DC;border-radius:8px;background:#ffffff;font-size:14px;font-weight:600;color:#141413"><span data-li-icon="" aria-hidden="true"></span>Voir son profil LinkedIn</a>
+            <p style="margin:0;font-size:24px;font-weight:800;letter-spacing:-0.8px;color:#0A0A0A">Josselin Pajean</p>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#5B6371">Co-fondateur du groupe HOLOPRO Média et d’Admova</p>
+            <a data-linkedin="" href="https://www.linkedin.com/in/josselin-pajean-536488175" target="_blank" rel="noopener" aria-label="Profil LinkedIn de Josselin Pajean (nouvel onglet)" style="margin-top:12px;display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px 0 12px;border:1px solid #E8E4DC;border-radius:8px;background:#ffffff;font-size:14px;font-weight:600;color:#141413"><span data-li-icon="" aria-hidden="true"></span>Voir son profil LinkedIn</a>
           </div>
         </div>
-      </sc-for>
+      
+        <div data-step="" data-tile="" data-founder="" style="--d:120ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:18px;display:grid;grid-template-columns:168px 1fr;gap:24px;align-items:center">
+          <span data-sheen="" aria-hidden="true"></span>
+          <img src="/assets/equipe-bruce-mallet-v2.jpg" alt="Bruce Mallet, co-fondateur de HOLOPRO Média et d’Admova" width="640" height="800" loading="lazy" decoding="async" style="position:relative;z-index:1;display:block;width:168px;height:210px;object-fit:cover;object-position:center 30%;border-radius:12px;background:#F5F6F7">
+          <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding-right:8px">
+            <p style="margin:0;font-size:24px;font-weight:800;letter-spacing:-0.8px;color:#0A0A0A">Bruce Mallet</p>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#5B6371">Co-fondateur du groupe HOLOPRO Média et d’Admova</p>
+            <a data-linkedin="" href="https://www.linkedin.com/in/bruce-mallet-228489175" target="_blank" rel="noopener" aria-label="Profil LinkedIn de Bruce Mallet (nouvel onglet)" style="margin-top:12px;display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px 0 12px;border:1px solid #E8E4DC;border-radius:8px;background:#ffffff;font-size:14px;font-weight:600;color:#141413"><span data-li-icon="" aria-hidden="true"></span>Voir son profil LinkedIn</a>
+          </div>
+        </div>
+      
     </div>
   </div>
 </section>
@@ -565,14 +675,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
       
     </div>
-    <sc-for list="{{ footerColumns }}" as="col" hint-placeholder-count="3">
+    
       <div style="display:flex;flex-direction:column;gap:10px">
-        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">{{ col.title }}</p>
-        <sc-for list="{{ col.links }}" as="lk" hint-placeholder-count="4">
-          <a data-flink="" href="{{ lk.href }}" style="font-size:14px;color:#4B5563;padding:3px 0">{{ lk.label }}</a>
-        </sc-for>
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">Solution</p>
+        
+          <a data-flink="" href="/notre-solution/" style="font-size:14px;color:#4B5563;padding:3px 0">Notre solution</a>
+        
+          <a data-flink="" href="/comment-ca-marche/" style="font-size:14px;color:#4B5563;padding:3px 0">Comment ça marche</a>
+        
+          <a data-flink="" href="/applications-partenaires/" style="font-size:14px;color:#4B5563;padding:3px 0">Applications partenaires</a>
+        
+          <a data-flink="" href="/temoignages/" style="font-size:14px;color:#4B5563;padding:3px 0">Témoignages</a>
+        
+          <a data-flink="" href="/faq/" style="font-size:14px;color:#4B5563;padding:3px 0">Questions fréquentes</a>
+        
       </div>
-    </sc-for>
+    
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">Pour qui</p>
+        
+          <a data-flink="" href="/pour-qui/" style="font-size:14px;color:#4B5563;padding:3px 0">Pour qui</a>
+        
+          <a data-flink="" href="/tpe-pme/" style="font-size:14px;color:#4B5563;padding:3px 0">TPE &amp; PME</a>
+        
+          <a data-flink="" href="/franchises/" style="font-size:14px;color:#4B5563;padding:3px 0">Franchises &amp; ETI</a>
+        
+          <a data-flink="" href="/grands-comptes/" style="font-size:14px;color:#4B5563;padding:3px 0">Grands comptes</a>
+        
+      </div>
+    
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">Admova</p>
+        
+          <a data-flink="" href="/a-propos/" style="font-size:14px;color:#4B5563;padding:3px 0">À propos</a>
+        
+          <a data-flink="" href="/secteurs/" style="font-size:14px;color:#4B5563;padding:3px 0">Secteurs</a>
+        
+          <a data-flink="" href="/rendez-vous/" style="font-size:14px;color:#4B5563;padding:3px 0">Nous contacter</a>
+        
+          <a data-flink="" href="/mentions-legales/" style="font-size:14px;color:#4B5563;padding:3px 0">Mentions légales</a>
+        
+          <a data-flink="" href="#cookies" style="font-size:14px;color:#4B5563;padding:3px 0">Gérer les cookies</a>
+        
+          <a data-flink="" href="/confidentialite/" style="font-size:14px;color:#4B5563;padding:3px 0">Confidentialité</a>
+        
+      </div>
+    
   </div>
   <div data-r="pad" style="max-width:1200px;margin:0 auto;padding:22px 32px 44px;border-top:1px solid #F1F2F4;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
     <p style="margin:0;font-size:13px;color:#5B6371">© 2026 Admova — Groupe HOLOPRO Média</p>

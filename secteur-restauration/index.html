@@ -350,12 +350,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <section data-r="pad" style="padding:88px 32px;background:#F5F6F7">
   <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px" data-r="three">
-    <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
-      <div data-reveal="" data-card="" style="--d:{{ p.delay }};background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
-        <h3 style="margin:0;font-size:20px;font-weight:700;line-height:1.35;letter-spacing:-0.4px;color:#0A0A0A">{{ p.title }}</h3>
-        <p style="margin:0;font-size:15px;line-height:1.65;color:#5B6371">{{ p.body }}</p>
+    
+      <div data-reveal="" data-card="" style="--d:0ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <h3 style="margin:0;font-size:20px;font-weight:700;line-height:1.35;letter-spacing:-0.4px;color:#0A0A0A">Plein écran. Impossible à ignorer.</h3>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:#5B6371">Votre publicité s’affiche en plein écran pendant 5 secondes entre deux actions de l’utilisateur dans son application. Pas un coin de page, pas une bande en bas — tout l’écran.</p>
       </div>
-    </sc-for>
+    
+      <div data-reveal="" data-card="" style="--d:80ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <h3 style="margin:0;font-size:20px;font-weight:700;line-height:1.35;letter-spacing:-0.4px;color:#0A0A0A">Zéro budget gaspillé.</h3>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:#5B6371">Admova diffuse votre publicitélicité uniquement auprès des personnes physiquement présentes dans votre zone de chalandise réelle. Pas des personnes qui « pourraient » passer. Celles qui sont là, maintenant.</p>
+      </div>
+    
+      <div data-reveal="" data-card="" style="--d:160ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <h3 style="margin:0;font-size:20px;font-weight:700;line-height:1.35;letter-spacing:-0.4px;color:#0A0A0A">Des chiffres, pas des estimations.</h3>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:#5B6371">Chaque semaine, vous recevez un rapport clair de vos performances réelles. Pas des projections — des données certifiées par des tiers indépendants.</p>
+      </div>
+    
   </div>
 </section>
 
@@ -429,14 +439,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
       
     </div>
-    <sc-for list="{{ footerColumns }}" as="col" hint-placeholder-count="3">
+    
       <div style="display:flex;flex-direction:column;gap:10px">
-        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">{{ col.title }}</p>
-        <sc-for list="{{ col.links }}" as="lk" hint-placeholder-count="4">
-          <a data-flink="" href="{{ lk.href }}" style="font-size:14px;color:#4B5563;padding:3px 0">{{ lk.label }}</a>
-        </sc-for>
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">Solution</p>
+        
+          <a data-flink="" href="/notre-solution/" style="font-size:14px;color:#4B5563;padding:3px 0">Notre solution</a>
+        
+          <a data-flink="" href="/comment-ca-marche/" style="font-size:14px;color:#4B5563;padding:3px 0">Comment ça marche</a>
+        
+          <a data-flink="" href="/applications-partenaires/" style="font-size:14px;color:#4B5563;padding:3px 0">Applications partenaires</a>
+        
+          <a data-flink="" href="/temoignages/" style="font-size:14px;color:#4B5563;padding:3px 0">Témoignages</a>
+        
+          <a data-flink="" href="/faq/" style="font-size:14px;color:#4B5563;padding:3px 0">Questions fréquentes</a>
+        
       </div>
-    </sc-for>
+    
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">Pour qui</p>
+        
+          <a data-flink="" href="/pour-qui/" style="font-size:14px;color:#4B5563;padding:3px 0">Pour qui</a>
+        
+          <a data-flink="" href="/tpe-pme/" style="font-size:14px;color:#4B5563;padding:3px 0">TPE &amp; PME</a>
+        
+          <a data-flink="" href="/franchises/" style="font-size:14px;color:#4B5563;padding:3px 0">Franchises &amp; ETI</a>
+        
+          <a data-flink="" href="/grands-comptes/" style="font-size:14px;color:#4B5563;padding:3px 0">Grands comptes</a>
+        
+      </div>
+    
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">Admova</p>
+        
+          <a data-flink="" href="/a-propos/" style="font-size:14px;color:#4B5563;padding:3px 0">À propos</a>
+        
+          <a data-flink="" href="/secteurs/" style="font-size:14px;color:#4B5563;padding:3px 0">Secteurs</a>
+        
+          <a data-flink="" href="/rendez-vous/" style="font-size:14px;color:#4B5563;padding:3px 0">Nous contacter</a>
+        
+          <a data-flink="" href="/mentions-legales/" style="font-size:14px;color:#4B5563;padding:3px 0">Mentions légales</a>
+        
+          <a data-flink="" href="#cookies" style="font-size:14px;color:#4B5563;padding:3px 0">Gérer les cookies</a>
+        
+          <a data-flink="" href="/confidentialite/" style="font-size:14px;color:#4B5563;padding:3px 0">Confidentialité</a>
+        
+      </div>
+    
   </div>
   <div data-r="pad" style="max-width:1200px;margin:0 auto;padding:22px 32px 44px;border-top:1px solid #F1F2F4;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
     <p style="margin:0;font-size:13px;color:#5B6371">© 2026 Admova — Groupe HOLOPRO Média</p>

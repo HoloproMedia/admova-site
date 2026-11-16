@@ -363,21 +363,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p style="margin:0;font-size:16px;line-height:1.7;color:#5B6371;max-width:60ch">Même technologie, même qualité de diffusion. Seul le dimensionnement change.</p>
     </div>
     <div data-reveal="" data-r="three" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-      <sc-for list="{{ profiles }}" as="p" hint-placeholder-count="3">
-        <div data-step="" data-card="" style="--d:{{ p.delay }};background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:16px;min-height:340px">
-          <span style="align-self:flex-start;background:#FDF0E8;border-radius:9999px;padding:4px 11px;font-size:12px;font-weight:700;color:#B8480F">{{ p.kicker }}</span>
-          <h3 style="margin:0;font-size:28px;font-weight:800;line-height:1.12;letter-spacing:-0.9px;color:#0A0A0A">{{ p.title }}</h3>
-          <p style="margin:0;font-size:15px;line-height:1.65;color:#5B6371">{{ p.body }}</p>
+      
+        <div data-step="" data-card="" style="--d:0ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:16px;min-height:340px">
+          <span style="align-self:flex-start;background:#FDF0E8;border-radius:9999px;padding:4px 11px;font-size:12px;font-weight:700;color:#B8480F">TPE &amp; PME</span>
+          <h3 style="margin:0;font-size:28px;font-weight:800;line-height:1.12;letter-spacing:-0.9px;color:#0A0A0A">Simple. Tout inclus.</h3>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#5B6371">Pas besoin de service marketing, pas besoin de compétences techniques. Un échange de 30 minutes, un visuel créé par notre équipe, en ligne sous 48 h.</p>
           <div style="display:flex;flex-direction:column;gap:7px">
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
               <span style="font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#5B6371">Zones</span>
-              <span style="font-size:13px;font-weight:700;color:#0A0A0A">{{ p.zones }}</span>
+              <span style="font-size:13px;font-weight:700;color:#0A0A0A">1 zone</span>
             </div>
-            <span style="height:8px;background:#F1F2F4;border-radius:9999px;overflow:hidden"><span data-fill="" style="--fw:{{ p.fw }};--bd:{{ p.bd }};display:block;height:100%;background:#D85A1A;border-radius:9999px"></span></span>
+            <span style="height:8px;background:#F1F2F4;border-radius:9999px;overflow:hidden"><span data-fill="" style="--fw:30%;--bd:0ms;display:block;height:100%;background:#D85A1A;border-radius:9999px"></span></span>
           </div>
-          <a data-btn="light" href="{{ p.href }}" style="margin-top:auto;align-self:flex-start;display:inline-block;border:1px solid #EFF0F2;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:14px;font-weight:600;padding:11px 22px">{{ p.kicker }}</a>
+          <a data-btn="light" href="/tpe-pme/" style="margin-top:auto;align-self:flex-start;display:inline-block;border:1px solid #EFF0F2;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:14px;font-weight:600;padding:11px 22px">TPE &amp; PME</a>
         </div>
-      </sc-for>
+      
+        <div data-step="" data-card="" style="--d:140ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:16px;min-height:340px">
+          <span style="align-self:flex-start;background:#FDF0E8;border-radius:9999px;padding:4px 11px;font-size:12px;font-weight:700;color:#B8480F">Franchises &amp; ETI</span>
+          <h3 style="margin:0;font-size:28px;font-weight:800;line-height:1.12;letter-spacing:-0.9px;color:#0A0A0A">Multi-sites. Un seul plan.</h3>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#5B6371">Chaque établissement dans sa zone géographique propre. Reporting consolidé pour la tête de réseau. Déploiement simultané sur tous les points de vente.</p>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+              <span style="font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#5B6371">Zones</span>
+              <span style="font-size:13px;font-weight:700;color:#0A0A0A">Multi-sites</span>
+            </div>
+            <span style="height:8px;background:#F1F2F4;border-radius:9999px;overflow:hidden"><span data-fill="" style="--fw:70%;--bd:160ms;display:block;height:100%;background:#D85A1A;border-radius:9999px"></span></span>
+          </div>
+          <a data-btn="light" href="/franchises/" style="margin-top:auto;align-self:flex-start;display:inline-block;border:1px solid #EFF0F2;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:14px;font-weight:600;padding:11px 22px">Franchises &amp; ETI</a>
+        </div>
+      
+        <div data-step="" data-card="" style="--d:280ms;background:#ffffff;border:1px solid #EFF0F2;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:16px;min-height:340px">
+          <span style="align-self:flex-start;background:#FDF0E8;border-radius:9999px;padding:4px 11px;font-size:12px;font-weight:700;color:#B8480F">Grands comptes</span>
+          <h3 style="margin:0;font-size:28px;font-weight:800;line-height:1.12;letter-spacing:-0.9px;color:#0A0A0A">Sur mesure. À l’échelle nationale.</h3>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#5B6371">Interlocuteur dédié, stratégie média sur mesure, reporting avancé avec indicateurs contractuels. Pour les marques qui opèrent à l’échelle nationale.</p>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+              <span style="font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#5B6371">Zones</span>
+              <span style="font-size:13px;font-weight:700;color:#0A0A0A">National</span>
+            </div>
+            <span style="height:8px;background:#F1F2F4;border-radius:9999px;overflow:hidden"><span data-fill="" style="--fw:100%;--bd:320ms;display:block;height:100%;background:#D85A1A;border-radius:9999px"></span></span>
+          </div>
+          <a data-btn="light" href="/grands-comptes/" style="margin-top:auto;align-self:flex-start;display:inline-block;border:1px solid #EFF0F2;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:14px;font-weight:600;padding:11px 22px">Grands comptes</a>
+        </div>
+      
     </div>
   </div>
 </section>
@@ -491,14 +519,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
       
     </div>
-    <sc-for list="{{ footerColumns }}" as="col" hint-placeholder-count="3">
+    
       <div style="display:flex;flex-direction:column;gap:10px">
-        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">{{ col.title }}</p>
-        <sc-for list="{{ col.links }}" as="lk" hint-placeholder-count="4">
-          <a data-flink="" href="{{ lk.href }}" style="font-size:14px;color:#4B5563;padding:3px 0">{{ lk.label }}</a>
-        </sc-for>
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">Solution</p>
+        
+          <a data-flink="" href="/notre-solution/" style="font-size:14px;color:#4B5563;padding:3px 0">Notre solution</a>
+        
+          <a data-flink="" href="/comment-ca-marche/" style="font-size:14px;color:#4B5563;padding:3px 0">Comment ça marche</a>
+        
+          <a data-flink="" href="/applications-partenaires/" style="font-size:14px;color:#4B5563;padding:3px 0">Applications partenaires</a>
+        
+          <a data-flink="" href="/temoignages/" style="font-size:14px;color:#4B5563;padding:3px 0">Témoignages</a>
+        
+          <a data-flink="" href="/faq/" style="font-size:14px;color:#4B5563;padding:3px 0">Questions fréquentes</a>
+        
       </div>
-    </sc-for>
+    
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">Pour qui</p>
+        
+          <a data-flink="" href="/pour-qui/" style="font-size:14px;color:#4B5563;padding:3px 0">Pour qui</a>
+        
+          <a data-flink="" href="/tpe-pme/" style="font-size:14px;color:#4B5563;padding:3px 0">TPE &amp; PME</a>
+        
+          <a data-flink="" href="/franchises/" style="font-size:14px;color:#4B5563;padding:3px 0">Franchises &amp; ETI</a>
+        
+          <a data-flink="" href="/grands-comptes/" style="font-size:14px;color:#4B5563;padding:3px 0">Grands comptes</a>
+        
+      </div>
+    
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5B6371">Admova</p>
+        
+          <a data-flink="" href="/a-propos/" style="font-size:14px;color:#4B5563;padding:3px 0">À propos</a>
+        
+          <a data-flink="" href="/secteurs/" style="font-size:14px;color:#4B5563;padding:3px 0">Secteurs</a>
+        
+          <a data-flink="" href="/rendez-vous/" style="font-size:14px;color:#4B5563;padding:3px 0">Nous contacter</a>
+        
+          <a data-flink="" href="/mentions-legales/" style="font-size:14px;color:#4B5563;padding:3px 0">Mentions légales</a>
+        
+          <a data-flink="" href="#cookies" style="font-size:14px;color:#4B5563;padding:3px 0">Gérer les cookies</a>
+        
+          <a data-flink="" href="/confidentialite/" style="font-size:14px;color:#4B5563;padding:3px 0">Confidentialité</a>
+        
+      </div>
+    
   </div>
   <div data-r="pad" style="max-width:1200px;margin:0 auto;padding:22px 32px 44px;border-top:1px solid #F1F2F4;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
     <p style="margin:0;font-size:13px;color:#5B6371">© 2026 Admova — Groupe HOLOPRO Média</p>

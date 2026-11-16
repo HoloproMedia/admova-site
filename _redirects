@@ -9,4 +9,18 @@
 /blog              /ressources/   301
 /blog/*            /ressources/   301
 /articles          /ressources/   301
+# Anciennes pages (export Search Console du 16/11/2026)
+/publicite-mobile-fast-food-paris             /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-fast-food-nantes            /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-fast-food-lille             /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-fast-food-toulouse          /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-fast-food-nice              /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-fast-food                   /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-restaurant-paris            /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-restaurant-lyon             /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-restaurant-marseille        /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-restaurant                  /publicite-geolocalisee-restaurant/   301
+/publicite-mobile-pizzeria                    /publicite-geolocalisee-restaurant/   301
+/guides/publicite-mobile-vs-reseaux-sociaux   /notoriete-locale-image-de-marque/    301
+/guides/*                                     /ressources/                          301
 /*                 /404/index.html   404
