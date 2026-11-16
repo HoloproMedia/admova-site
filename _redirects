@@ -3,4 +3,10 @@
 /contact           /rendez-vous/     301
 /questions         /faq/             301
 /faq.html          /faq/             301
+/rendez-vous.html  /rendez-vous/  301
+/contact.html      /rendez-vous/  301
+/a-propos.html     /a-propos/     301
+/blog              /ressources/   301
+/blog/*            /ressources/   301
+/articles          /ressources/   301
 /*                 /404/index.html   404
