@@ -11,11 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/admova-oaiq.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<!-- Balises SEO dans le <head> (lisibles sans JavaScript) -->
 <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
@@ -373,7 +369,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 1040px) { [data-founder] { grid-template-columns: 140px 1fr !important; } [data-founder] img { width: 140px !important; height: 175px !important; } }
   @media (max-width: 430px) { [data-founder] { grid-template-columns: 1fr !important; gap: 16px !important; } [data-founder] img { width: 100% !important; height: auto !important; aspect-ratio: 4 / 5; } }
 </style>
-</helmet>
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet></helmet>
 <div style="min-height:100vh;background:#ffffff;color:#5B6371;font-family:Inter,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden">
 
 <div data-navwrap="" style="position:sticky;top:0;z-index:50;padding:16px 20px 8px;display:flex;justify-content:center;pointer-events:none;background:#FDF0E8">
