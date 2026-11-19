@@ -11,11 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/admova-oaiq.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<!-- Balises SEO dans le <head> (lisibles sans JavaScript) -->
 <meta name="description" content="Géociblage publicitaire au mètre près : votre publicité sur 1 600+ applications mobiles et en TV connectée, uniquement dans votre zone. Géofencing, ciblage précis, image de marque premium et notoriété. Visuel inclus, en ligne en 48 h.">
 <link rel="canonical" href="https://admova.fr/">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -783,7 +779,11 @@ Les volumes et estimations affichés sont communiqués à titre purement indicat
   [data-herostats] [data-hstat] > span:last-child { font-size: clamp(12.5px, 1vw, 14px) !important; white-space: nowrap !important; }
   @media (max-width: 480px) { [data-herostats] { flex-wrap: nowrap !important; column-gap: 8px !important; justify-content: space-between; } [data-herostats] [data-hstat] { gap: 4px !important; } [data-herostats] [data-hstat] > span:first-child { font-size: 14px !important; } [data-herostats] [data-hstat] > span:last-child { font-size: 11.5px !important; } [data-herostats] [data-hstat] + [data-hstat]::before { display: none; } }
 </style>
-</helmet>
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet></helmet>
 <div style="min-height:100vh;background:#ffffff;color:#5B6371;font-family:Inter,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden">
 
 <div data-navwrap="" style="position:sticky;top:0;z-index:50;padding:16px 20px 8px;display:flex;justify-content:center;pointer-events:none;background:rgb(253,240,232);background:color-mix(in srgb, #FDF0E8 calc(var(--hbg, 0) * 100%), #ffffff)">
