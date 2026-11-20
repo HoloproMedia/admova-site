@@ -1888,8 +1888,8 @@ function Geociblage({
     surface: "default",
     pad: "lg"
   }, /*#__PURE__*/React.createElement(StatBlock, {
-    value: "267",
-    label: "campagnes g\xE9olocalis\xE9es",
+    value: "500",
+    label: "campagnes lanc\xE9es",
     note: "Restauration, distribution, automobile"
   }))))), /*#__PURE__*/React.createElement(Section, {
     surface: "sand",
@@ -1993,8 +1993,8 @@ function Home({
       value: '6 ans',
       label: "d'existence"
     }, {
-      value: '267',
-      label: 'campagnes diffusées'
+      value: '500',
+      label: 'campagnes lancées'
     }, {
       value: '1 Md',
       label: "d'impressions"
@@ -2364,12 +2364,12 @@ function References({
   }, /*#__PURE__*/React.createElement(SectionHeading, {
     tone: "onInk",
     eyebrow: "Six ans de diffusion",
-    title: "Ce que 267 campagnes nous ont appris."
+    title: "Ce que 500 campagnes nous ont appris."
   }), /*#__PURE__*/React.createElement(StatRow, {
     tone: "onInk",
     items: [{
-      value: '267',
-      label: 'campagnes'
+      value: '500',
+      label: 'campagnes lancées'
     }, {
       value: '1 Md',
       label: "d'impressions"

@@ -45,7 +45,7 @@ const FAITS_ADMOVA = `
 - Publicité plein écran (interstitiel 9:16) dans plus de 1 600 applications mobiles (Leboncoin, Vinted, L'Équipe…).
 - TV connectée : replay de TF1, M6, W9 et chaînes gratuites en streaming (Molotov, Samsung TV Plus, Pluto TV, Rakuten TV).
 - Ciblage GPS au mètre près autour de chaque point de vente ; aucune impression hors zone.
-- 267 campagnes déployées, plus de 120 enseignes clientes (KFC, McDonald's, Burger King, E.Leclerc, BMW, AXA).
+- 500 campagnes lancées, plus de 120 enseignes clientes (KFC, McDonald's, Burger King, E.Leclerc, BMW, AXA).
 - Création du visuel incluse, mise en ligne en 48 h. Couverture : France, États-Unis, Royaume-Uni, Canada, Belgique, Suisse, Luxembourg, Espagne, Italie, Émirats arabes unis.
 - Rayons indicatifs : restauration et immobilier 500 m à 2 km ; commerce 1 à 3 km ; santé et services 3 à 8 km ; hôtellerie 10 à 20 km ; automobile 15 à 30 km.
 - Marché France 2026 (WPP Media, This Year Next Year, juin 2026) : 29,7 Md€ (+4,9 %) ; TV connectée 961 M€ (+24,7 %) ; TV linéaire −7,9 % ; retail media 1,66 Md€ (+9,2 %).`;
