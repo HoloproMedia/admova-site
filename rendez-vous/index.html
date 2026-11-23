@@ -311,6 +311,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (prefers-reduced-motion: reduce) { [data-step-panel] { animation: none !important; } [data-seg] { transition: none; } }
 </style>
 <script src="/support.js"></script>
+
+<style>
+  /* ---- DA de l'accueil (titres + formulaire) ---- */
+  [data-src]:hover { border-color: #E3C9B6 !important; }
+  [data-src]:has(input:checked) { border-color: #D85A1A !important; background: #FDF0E8 !important; }
+  [data-src]:has(input:focus-visible) { box-shadow: 0 0 0 3px rgba(216,90,26,0.14) !important; }
+  button[data-locked="true"] { background: #CFCAC2 !important; color: #ffffff !important; cursor: not-allowed !important; box-shadow: none !important; transform: none !important; }
+  @keyframes stepNext { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+  @keyframes stepBack { from { opacity: 0; transform: translateX(-16px); } to { opacity: 1; transform: none; } }
+  [data-step-panel] { animation: stepNext 280ms cubic-bezier(0.22,0.61,0.36,1) both; }
+  [data-step-panel][data-dir="back"] { animation-name: stepBack; }
+  [data-step-panel][data-dir="none"] { animation: none; }
+  [data-seg] { transition: background-color 200ms cubic-bezier(0.22,0.61,0.36,1); }
+  [data-seg="on"] { background: #D85A1A !important; }
+  [data-invalid="true"] { border-color: #B8480F !important; }
+  @media (max-width: 767px) {
+    [data-stepnav] { flex-direction: column-reverse; align-items: stretch; gap: 10px; }
+    [data-stepnav] button { width: 100%; min-height: 54px; justify-content: center; }
+  }
+  @media (prefers-reduced-motion: reduce) { [data-step-panel] { animation: none !important; } [data-seg] { transition: none; } }
+  @keyframes kMark { from { background-size: 0% 0.34em; } to { background-size: 100% 0.34em; } }
+  [data-kmark] { color: #D85A1A; background-image: linear-gradient(#FDE3CF, #FDE3CF); background-repeat: no-repeat; background-position: 0 88%; background-size: 0% 0.34em; padding: 0 0.04em; }
+  [data-in] [data-kmark], [data-kmark][data-in], [data-in][data-r="h2"] [data-kmark] { animation: kMark 900ms cubic-bezier(0.22,0.61,0.36,1) 420ms forwards; }
+  h1[data-r="h1"] [data-kmark] { animation: kMark 900ms cubic-bezier(0.22,0.61,0.36,1) 300ms forwards; }
+  @media (prefers-reduced-motion: reduce) { [data-kmark] { animation: none !important; background-size: 100% 0.34em; } }
+  @media (max-width: 1040px) { h2[data-bigh] { font-size: 52px !important; letter-spacing: -2.2px !important; line-height: 1 !important; } }
+  @media (max-width: 860px) { h2[data-bigh] { font-size: 42px !important; letter-spacing: -1.6px !important; } }
+  @media (max-width: 480px) { h2[data-bigh] { font-size: 34px !important; letter-spacing: -1.2px !important; } }
+</style>
 </head>
 <body>
 <x-dc>
@@ -352,14 +381,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section data-r="pad" style="padding:64px 32px 56px">
   <div data-reveal="" style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:18px">
     <nav style="display:flex;align-items:center;gap:8px;font-size:13px;color:#5B6371"><a data-flink href="/" style="color:#5B6371">Accueil</a><span>·</span><span style="color:#0A0A0A;font-weight:600">Nous contacter</span></nav>
-    <h1 data-r="h1" style="margin:0;font-size:56px;font-weight:800;line-height:1.06;letter-spacing:-2.1px;color:#0A0A0A;max-width:22ch">On vous rappelle sous 24 h.</h1>
+    <h1 data-r="h1" style="margin:0;font-size:72px;font-weight:800;line-height:1.02;letter-spacing:-2.9px;color:#0A0A0A;max-width:22ch">On vous rappelle sous 24 <span data-kmark="">h.</span></h1>
     <p style="margin:0;font-size:17px;line-height:1.7;color:#5B6371;max-width:68ch">Un échange rapide pour voir si Admova est fait pour votre entreprise. Sans jargon.</p>
   </div>
 </section>
 <section data-r="pad" style="padding:0 32px 96px">
   <div data-reveal="" style="max-width:1200px;margin:0 auto;background:#FDF0E8;border-radius:24px;padding:48px">
     <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:28px">
-      <h2 data-r="h2" style="margin:0;font-size:34px;font-weight:800;line-height:1.15;letter-spacing:-1.2px;color:#0A0A0A">Parlons de votre projet.</h2>
+      <h2 data-r="h2" data-bigh="" style="margin:0;font-size:64px;font-weight:800;line-height:0.98;letter-spacing:-2.8px;color:#0A0A0A">Parlons de votre <span data-kmark="">projet.</span></h2>
       <p style="margin:0;font-size:15px;font-weight:500;line-height:1.6;color:#5B6371">Réponse sous 24 h</p>
     </div>
     <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
