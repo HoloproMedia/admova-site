@@ -288,7 +288,7 @@
   </url>
   <url>
     <loc>https://admova.fr/ressources/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-FR" href="https://admova.fr/ressources/"/>
@@ -493,5 +493,18 @@
     <xhtml:link rel="alternate" hreflang="fr-CA" href="https://admova.fr/mesurer-campagne-drive-to-store/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://admova.fr/mesurer-campagne-drive-to-store/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://admova.fr/mesurer-campagne-drive-to-store/"/>
+  </url>
+  <url>
+    <loc>https://admova.fr/attention-publicitaire-tv-apps-reseaux-sociaux/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-FR" href="https://admova.fr/attention-publicitaire-tv-apps-reseaux-sociaux/"/>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://admova.fr/attention-publicitaire-tv-apps-reseaux-sociaux/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://admova.fr/attention-publicitaire-tv-apps-reseaux-sociaux/"/>
+    <xhtml:link rel="alternate" hreflang="fr-LU" href="https://admova.fr/attention-publicitaire-tv-apps-reseaux-sociaux/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://admova.fr/attention-publicitaire-tv-apps-reseaux-sociaux/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://admova.fr/attention-publicitaire-tv-apps-reseaux-sociaux/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://admova.fr/attention-publicitaire-tv-apps-reseaux-sociaux/"/>
   </url>
 </urlset>
