@@ -295,6 +295,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 </style>
 <script src="/support.js"></script>
+
+<style>
+  /* ---- DA de l'accueil (titres + formulaire) ---- */
+  [data-src]:hover { border-color: #E3C9B6 !important; }
+  [data-src]:has(input:checked) { border-color: #D85A1A !important; background: #FDF0E8 !important; }
+  [data-src]:has(input:focus-visible) { box-shadow: 0 0 0 3px rgba(216,90,26,0.14) !important; }
+  button[data-locked="true"] { background: #CFCAC2 !important; color: #ffffff !important; cursor: not-allowed !important; box-shadow: none !important; transform: none !important; }
+  @keyframes stepNext { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+  @keyframes stepBack { from { opacity: 0; transform: translateX(-16px); } to { opacity: 1; transform: none; } }
+  [data-step-panel] { animation: stepNext 280ms cubic-bezier(0.22,0.61,0.36,1) both; }
+  [data-step-panel][data-dir="back"] { animation-name: stepBack; }
+  [data-step-panel][data-dir="none"] { animation: none; }
+  [data-seg] { transition: background-color 200ms cubic-bezier(0.22,0.61,0.36,1); }
+  [data-seg="on"] { background: #D85A1A !important; }
+  [data-invalid="true"] { border-color: #B8480F !important; }
+  @media (max-width: 767px) {
+    [data-stepnav] { flex-direction: column-reverse; align-items: stretch; gap: 10px; }
+    [data-stepnav] button { width: 100%; min-height: 54px; justify-content: center; }
+  }
+  @media (prefers-reduced-motion: reduce) { [data-step-panel] { animation: none !important; } [data-seg] { transition: none; } }
+  @keyframes kMark { from { background-size: 0% 0.34em; } to { background-size: 100% 0.34em; } }
+  [data-kmark] { color: #D85A1A; background-image: linear-gradient(#FDE3CF, #FDE3CF); background-repeat: no-repeat; background-position: 0 88%; background-size: 0% 0.34em; padding: 0 0.04em; }
+  [data-in] [data-kmark], [data-kmark][data-in], [data-in][data-r="h2"] [data-kmark] { animation: kMark 900ms cubic-bezier(0.22,0.61,0.36,1) 420ms forwards; }
+  h1[data-r="h1"] [data-kmark] { animation: kMark 900ms cubic-bezier(0.22,0.61,0.36,1) 300ms forwards; }
+  @media (prefers-reduced-motion: reduce) { [data-kmark] { animation: none !important; background-size: 100% 0.34em; } }
+  @media (max-width: 1040px) { h2[data-bigh] { font-size: 52px !important; letter-spacing: -2.2px !important; line-height: 1 !important; } }
+  @media (max-width: 860px) { h2[data-bigh] { font-size: 42px !important; letter-spacing: -1.6px !important; } }
+  @media (max-width: 480px) { h2[data-bigh] { font-size: 34px !important; letter-spacing: -1.2px !important; } }
+</style>
 </head>
 <body>
 <x-dc>
@@ -336,7 +365,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section data-r="pad" style="padding:64px 32px 56px">
   <div data-reveal="" style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:18px">
     <nav style="display:flex;align-items:center;gap:8px;font-size:13px;color:#5B6371"><a data-flink href="/" style="color:#5B6371">Accueil</a><span>·</span><a data-flink href="/ressources/" style="color:#5B6371">Ressources</a><span>·</span><span style="color:#0A0A0A;font-weight:600">Automobile</span></nav>
-    <h1 data-r="h1" style="margin:0;font-size:56px;font-weight:800;line-height:1.06;letter-spacing:-2.1px;color:#0A0A0A;max-width:22ch">Geofence automobile : pourquoi un rayon large est indispensable.</h1>
+    <h1 data-r="h1" style="margin:0;font-size:60px;font-weight:800;line-height:1.02;letter-spacing:-2.4px;color:#0A0A0A;max-width:22ch">Geofence automobile : pourquoi un rayon large est <span data-kmark="">indispensable.</span></h1>
     <p style="margin:0;font-size:17px;line-height:1.7;color:#5B6371;max-width:68ch">Une campagne de publicité mobile géolocalisée pour une concession automobile ne se conçoit pas comme pour un commerce de proximité. Le rayon du geofence doit tenir compte d’une zone de chalandise bien plus étendue.</p>
 
   </div>
@@ -409,13 +438,124 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a data-flink href="/publicite-interstitielle-mobile/" style="font-size:17px;font-weight:700;line-height:1.4;color:#0A0A0A">Publicité interstitielle mobile : pourquoi le plein écran marque les esprits.</a>
   </div>
 </section>
-<section data-r="pad" style="padding:88px 32px">
-  <div data-reveal="" style="max-width:1200px;margin:0 auto;background:#FDF0E8;border-radius:24px;padding:56px 48px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between">
-    <div style="display:flex;flex-direction:column;gap:10px;max-width:48ch">
-      <h2 style="margin:0;font-size:32px;font-weight:800;line-height:1.15;letter-spacing:-1px;color:#0A0A0A">Prêt à toucher vos clients ?</h2>
-      <p style="margin:0;font-size:15px;font-weight:500;line-height:1.6;color:#5B6371">Création du visuel incluse · Mise en ligne en 48 h</p>
+<section data-r="pad" style="padding:64px 32px 0">
+  <div data-reveal="" style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border-top:1px solid #EFF0F2;padding-top:32px">
+    <h2 style="margin:0;font-size:21px;font-weight:700;line-height:1.3;letter-spacing:-0.4px;color:#0A0A0A;max-width:34ch">Une question sur le géociblage, les rayons ou la mesure ?</h2>
+    <a data-btn="line" href="/faq/" style="border:1px solid #E5E7EB;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;font-weight:600;padding:15px 28px">Consulter la FAQ</a>
+  </div>
+</section>
+
+<section id="contact" data-r="pad" style="padding:96px 32px">
+  <div data-reveal="" style="max-width:1200px;margin:0 auto;background:#FDF0E8;border-radius:24px;padding:56px 48px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+    <div style="width:100%;display:flex;flex-direction:column;gap:8px">
+          <h2 data-r="h2" data-bigh="" style="margin:0;font-size:64px;font-weight:800;line-height:0.98;letter-spacing:-2.8px;color:#0A0A0A;max-width:16ch">Prêt à toucher vos <span data-kmark="">clients&nbsp;?</span></h2>
+      <p style="margin:0;font-size:15px;font-weight:500;line-height:1.6;color:#5B6371">Création du visuel incluse · Mise en ligne en 48&nbsp;h</p>
     </div>
-    <a data-btn="solid" href="/rendez-vous/" style="border-radius:9999px;background:#B8480F;color:#ffffff;font-size:15px;font-weight:600;padding:16px 32px">Demander une étude gratuite</a>
+    <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+      <form noValidate="{{ true }}" onSubmit="{{ submit }}" style="width:100%;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <p tabindex="-1" data-step-title="" style="margin:0;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#B8480F;outline:none">Étape {{ step }} sur 3</p>
+            <p style="margin:0;font-size:15px;font-weight:700;color:#0A0A0A">{{ stepName }}</p>
+          </div>
+          <div role="progressbar" aria-label="Progression du formulaire" aria-valuemin="1" aria-valuemax="3" aria-valuenow="{{ step }}" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+            <span data-seg="{{ seg1 }}" style="height:6px;border-radius:9999px;background:#F0DDD0"></span>
+            <span data-seg="{{ seg2 }}" style="height:6px;border-radius:9999px;background:#F0DDD0"></span>
+            <span data-seg="{{ seg3 }}" style="height:6px;border-radius:9999px;background:#F0DDD0"></span>
+          </div>
+        </div>
+        <sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ true }}">
+        <div data-step-panel="" data-dir="{{ dir }}" style="display:flex;flex-direction:column;gap:18px">
+          <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Prénom *</span><input data-focusable="" autocomplete="given-name" value="{{ f.prenom }}" onChange="{{ set_prenom }}" placeholder="Prénom" data-invalid="{{ bad.prenom }}" aria-invalid="{{ bad.prenom }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.prenom }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.prenom }}</p></sc-if></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Nom *</span><input data-focusable="" autocomplete="family-name" value="{{ f.nom }}" onChange="{{ set_nom }}" placeholder="Nom" data-invalid="{{ bad.nom }}" aria-invalid="{{ bad.nom }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.nom }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.nom }}</p></sc-if></label>
+          </div>
+          <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">E-mail *</span><input data-focusable="" type="email" autocomplete="email" inputmode="email" value="{{ f.email }}" onChange="{{ set_email }}" placeholder="E-mail" data-invalid="{{ bad.email }}" aria-invalid="{{ bad.email }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.email }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.email }}</p></sc-if></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Téléphone *</span><input data-focusable="" type="tel" autocomplete="tel" inputmode="tel" value="{{ f.tel }}" onChange="{{ set_tel }}" placeholder="Téléphone" data-invalid="{{ bad.tel }}" aria-invalid="{{ bad.tel }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.tel }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.tel }}</p></sc-if></label>
+          </div>
+        </div>
+        </sc-if>
+        <sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
+        <div data-step-panel="" data-dir="{{ dir }}" style="display:flex;flex-direction:column;gap:18px">
+          <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Nom de l’entreprise *</span><input data-focusable="" autocomplete="organization" value="{{ f.entreprise }}" onChange="{{ set_entreprise }}" placeholder="Nom de l’entreprise" data-invalid="{{ bad.entreprise }}" aria-invalid="{{ bad.entreprise }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.entreprise }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.entreprise }}</p></sc-if></label>
+          <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Secteur d’activité *</span>
+              <select data-focusable="" value="{{ f.secteur }}" onChange="{{ set_secteur }}" data-invalid="{{ bad.secteur }}" aria-invalid="{{ bad.secteur }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 20px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease">
+                <option value="">Secteur d’activité</option>
+                <option value="Commerce &amp; Retail">Commerce &amp; Retail</option>
+                <option value="Automobile">Automobile</option>
+                <option value="Immobilier">Immobilier</option>
+                <option value="Restauration">Restauration</option>
+                <option value="Santé &amp; Bien-être">Santé &amp; Bien-être</option>
+                <option value="Hôtellerie &amp; Tourisme">Hôtellerie &amp; Tourisme</option>
+                <option value="Services &amp; B2B">Services &amp; B2B</option>
+              </select><sc-if value="{{ e.secteur }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.secteur }}</p></sc-if></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Ville *</span><input data-focusable="" autocomplete="address-level2" value="{{ f.ville }}" onChange="{{ set_ville }}" placeholder="Ville" data-invalid="{{ bad.ville }}" aria-invalid="{{ bad.ville }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.ville }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.ville }}</p></sc-if></label>
+          </div>
+          <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Nombre de points de vente *</span>
+              <select data-focusable="" value="{{ f.sites }}" onChange="{{ set_sites }}" data-invalid="{{ bad.sites }}" aria-invalid="{{ bad.sites }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 20px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease">
+                <option value="">Nombre de points de vente</option>
+                <option value="1">1 point de vente</option>
+                <option value="2 à 9">2 à 9</option>
+                <option value="10 à 49">10 à 49</option>
+                <option value="50 à 199">50 à 199</option>
+                <option value="200 et plus">200 et plus</option>
+              </select><sc-if value="{{ e.sites }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.sites }}</p></sc-if></label>
+            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Budget envisagé *</span>
+              <select data-focusable="" value="{{ f.budget }}" onChange="{{ set_budget }}" data-invalid="{{ bad.budget }}" aria-invalid="{{ bad.budget }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 20px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease">
+                <option value="">Budget envisagé</option>
+                <option value="Moins de 1 000 € / mois">Moins de 1 000 € / mois</option>
+                <option value="1 000 à 5 000 € / mois">1 000 à 5 000 € / mois</option>
+                <option value="5 000 à 20 000 € / mois">5 000 à 20 000 € / mois</option>
+                <option value="Plus de 20 000 € / mois">Plus de 20 000 € / mois</option>
+                <option value="À définir ensemble">À définir ensemble</option>
+              </select><sc-if value="{{ e.budget }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.budget }}</p></sc-if></label>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Taille de l’entreprise *</span>
+              <select data-focusable="" value="{{ f.taille }}" onChange="{{ set_taille }}" data-invalid="{{ bad.taille }}" aria-invalid="{{ bad.taille }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 20px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease">
+                <option value="">Taille de l’entreprise</option>
+                <option value="TPE">TPE</option>
+                <option value="PME">PME</option>
+                <option value="Franchise ou ETI">Franchise ou ETI</option>
+                <option value="Grand compte">Grand compte</option>
+              </select><sc-if value="{{ e.taille }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.taille }}</p></sc-if></label>
+        </div>
+        </sc-if>
+        <sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}">
+        <div data-step-panel="" data-dir="{{ dir }}" style="display:flex;flex-direction:column;gap:18px">
+          <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Message *</span><textarea data-focusable="" data-invalid="{{ bad.message }}" aria-invalid="{{ bad.message }}" rows="3" value="{{ f.message }}" onChange="{{ setMessage }}" placeholder="Votre projet en quelques mots" style="border:1px solid #F0DDD0;border-radius:20px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:16px 22px;outline:none;resize:vertical;font-family:inherit;line-height:1.6;transition:border-color 160ms ease, box-shadow 160ms ease"></textarea><sc-if value="{{ e.message }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.message }}</p></sc-if></label>
+          <fieldset data-srcset="" aria-required="true" style="margin:0;padding:0;border:0;min-width:0;display:flex;flex-direction:column;gap:10px">
+          <legend style="padding:0;margin:0 0 10px;font-size:14px;font-weight:600;color:#0A0A0A">Comment nous avez-vous connu ? *</legend>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px">
+            <sc-for list="{{ sources }}" as="so" hint-placeholder-count="6">
+              <label data-src="" style="display:flex;align-items:center;gap:12px;min-height:48px;padding:12px 16px;box-sizing:border-box;border:1px solid #F0DDD0;border-radius:12px;background:#ffffff;cursor:pointer;font-size:14px;font-weight:500;line-height:1.35;color:#0A0A0A;transition:border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease">
+                <input type="radio" name="source" value="{{ so.v }}" checked="{{ so.checked }}" onChange="{{ so.pick }}" style="flex:none;width:18px;height:18px;margin:0;accent-color:#D85A1A;cursor:pointer">
+                <span>{{ so.v }}</span>
+              </label>
+            </sc-for>
+          </div>
+          <sc-if value="{{ srcError }}" hint-placeholder-val="{{ false }}">
+            <p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">Merci d’indiquer comment vous nous avez connu</p>
+          </sc-if>
+        </fieldset>
+        </div>
+        </sc-if>
+        <div data-stepnav="" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:4px">
+          <sc-if value="{{ hasBack }}" hint-placeholder-val="{{ false }}"><button data-btn="line" type="button" onClick="{{ goBack }}" style="border:1px solid #E5E7EB;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;font-weight:600;padding:15px 28px;cursor:pointer">Retour</button></sc-if>
+          <sc-if value="{{ notLast }}" hint-placeholder-val="{{ true }}"><button data-btn="solid" type="submit" style="border:0;border-radius:9999px;background:#B8480F;color:#ffffff;font-size:15px;font-weight:600;padding:16px 32px;cursor:pointer">Suivant</button></sc-if>
+          <sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}"><button data-btn="solid" type="submit" disabled="{{ sending }}" data-locked="{{ locked }}" aria-disabled="{{ locked }}" style="border:0;border-radius:9999px;background:#B8480F;color:#ffffff;font-size:15px;font-weight:600;padding:16px 32px;cursor:pointer;display:inline-flex;align-items:center;gap:9px">{{ sendLabel }}</button></sc-if>
+        </div>
+        <p style="margin:0;font-size:12.5px;line-height:1.55;color:#807D75">Vos réponses sont enregistrées à chaque étape, pour que nous puissions vous recontacter même si vous ne terminez pas. <a href="/confidentialite/" style="color:#5B6371">Confidentialité</a></p>
+      </form>
+    </sc-if>
+    <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+      <div style="width:100%;background:#ffffff;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+        <h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-0.7px;color:#0A0A0A">Demande envoyée !</h3>
+        <p style="margin:0;font-size:16px;line-height:1.65;color:#5B6371">Merci, nous vous recontactons sous 24&nbsp;h. À très vite !</p>
+      </div>
+    </sc-if>
   </div>
 </section>
 
@@ -482,7 +622,154 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  componentDidMount() { this.ensureReveal(); }
+  state = { sent: false, sending: false, form: { prenom: '', nom: '', entreprise: '', email: '', tel: '', secteur: '', ville: '', taille: '', sites: '', budget: '', message: '', source: '' }, srcError: false, step: 1, dir: 'none', err: {} };
+
+  goToContact() {
+    const el = document.getElementById('contact');
+    if (!el) return;
+    const nav = document.querySelector('[data-navwrap]');
+    const off = (nav ? nav.getBoundingClientRect().height : 0) + 24;
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - off, behavior: 'smooth' });
+  }
+  validate(step) {
+    const f = this.state.form, e = {};
+    const t = (v) => String(v || '').trim();
+    if (step === 1) {
+      if (!t(f.prenom)) e.prenom = 'Indiquez votre prénom';
+      if (!t(f.nom)) e.nom = 'Indiquez votre nom';
+      if (!t(f.email)) e.email = 'Indiquez votre adresse e-mail';
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(t(f.email))) e.email = 'Cette adresse e-mail semble incomplète';
+      if ((t(f.tel).match(/\d/g) || []).length < 9) e.tel = 'Indiquez un numéro de téléphone complet';
+    } else if (step === 2) {
+      if (!t(f.entreprise)) e.entreprise = 'Indiquez le nom de votre entreprise';
+      if (!t(f.secteur)) e.secteur = 'Choisissez votre secteur d’activité';
+      if (!t(f.ville)) e.ville = 'Indiquez votre ville';
+      if (!t(f.sites)) e.sites = 'Choisissez le nombre de points de vente';
+      if (!t(f.budget)) e.budget = 'Choisissez un budget';
+      if (!t(f.taille)) e.taille = 'Choisissez la taille de votre entreprise';
+    } else {
+      if (!t(f.message)) e.message = 'Décrivez votre projet en quelques mots';
+      if (!f.source) e.source = 'Merci d’indiquer comment vous nous avez connu';
+    }
+    this.setState({ err: e, srcError: !!e.source });
+    const first = Object.keys(e)[0];
+    if (first && first !== 'source') setTimeout(() => {
+      const el = document.querySelector('[data-step-panel] [aria-invalid="true"]');
+      if (el) el.focus();
+    }, 30);
+    return !first;
+  }
+
+  // Changement d'étape : le haut du formulaire revient à l'écran, le focus suit.
+  goStep(n, dir) {
+    this.setState({ step: n, dir, err: {}, srcError: false }, () => {
+      const t = document.querySelector('[data-step-title]');
+      if (!t) return;
+      const r = t.getBoundingClientRect();
+      if (r.top < 96 || r.top > (window.innerHeight || 800) * 0.6) window.scrollTo({ top: r.top + window.scrollY - 120, behavior: 'smooth' });
+      try { t.focus({ preventScroll: true }); } catch (e) {}
+    });
+  }
+
+  // Récupération des demandes non terminées : envoi discret à chaque étape validée
+  // et quand le visiteur quitte la page, vers le formulaire Netlify « demande-partielle ».
+  // Rien n'est envoyé tant que le visiteur n'a saisi ni e-mail ni téléphone.
+  sendPartial(etape) {
+    if (this._finalSent || typeof window === 'undefined') return;
+    const f = this.state.form;
+    if (!String(f.email || '').trim() && !String(f.tel || '').trim()) return;
+    if (!this._sid) this._sid = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+    const data = {
+      prenom: f.prenom, nom: f.nom, entreprise: f.entreprise, email: f.email, telephone: f.tel,
+      secteur: f.secteur, ville: f.ville, taille: f.taille, points_de_vente: f.sites, budget: f.budget,
+      message: f.message, source: f.source,
+    };
+    const sig = JSON.stringify(data);
+    if (sig === this._lastPartial) return;
+    this._lastPartial = sig;
+    const body = new URLSearchParams({ 'form-name': 'demande-partielle', 'bot-field': '', etape, session: this._sid, page: location.pathname, ...data });
+    try { fetch('/', { method: 'POST', keepalive: true, headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() }).catch(() => {}); } catch (e) {}
+  }
+
+  ensurePartialCapture() {
+    if (this._pc || typeof window === 'undefined') return;
+    this._pc = true;
+    // Fermeture de l'onglet ou départ vers un autre site : c'est la dernière occasion
+    // d'envoyer, rien ne peut s'exécuter ensuite. Changer d'onglet n'envoie rien.
+    this._onHide = () => { clearTimeout(this._partialTimer); this._partialTimer = null; this.sendPartial('a quitté la page à l’étape ' + this.state.step); };
+    window.addEventListener('pagehide', this._onHide);
+  }
+
+  // Une étape validée lance un délai de 5 min ; toute saisie le relance.
+  // Si le visiteur envoie sa demande avant, rien de partiel ne part.
+  armPartial() {
+    clearTimeout(this._partialTimer);
+    this._partialTimer = setTimeout(() => {
+      this._partialTimer = null;
+      this.sendPartial('sans activité depuis 5 min, à l’étape ' + this.state.step);
+    }, 5 * 60 * 1000);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._partialTimer);
+    if (this._onHide) window.removeEventListener('pagehide', this._onHide);
+  }
+  // Formulaire de contact en 3 étapes (identique à l’accueil)
+  formVals() {
+    const set = (k) => (e) => { const v = e.target.value; if (this._partialTimer) this.armPartial(); this.setState(s => ({ form: { ...s.form, [k]: v }, err: s.err[k] ? { ...s.err, [k]: '' } : s.err })); };
+    const st = this.state.step, er = this.state.err || {};
+    const KEYS = ['prenom','nom','email','tel','entreprise','secteur','ville','sites','budget','taille','message'];
+    return {
+      goContact: () => this.goToContact(),
+      f: this.state.form,
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      sending: this.state.sending,
+      sources: ['Google', 'Intelligence artificielle (ChatGPT, Claude…)', 'Bouche à oreille / recommandation', 'Facebook', 'Instagram', 'LinkedIn'].map((v) => ({ v, checked: this.state.form.source === v, pick: () => { if (this._partialTimer) this.armPartial(); this.setState((s) => ({ form: { ...s.form, source: v }, srcError: false, err: { ...s.err, source: '' } })); } })),
+      srcError: this.state.srcError,
+      step: st, stepName: ['Vous', 'Votre entreprise', 'Votre projet'][st - 1],
+      seg1: 'on', seg2: st >= 2 ? 'on' : 'off', seg3: st >= 3 ? 'on' : 'off',
+      isStep1: st === 1, isStep2: st === 2, isStep3: st === 3, hasBack: st > 1, notLast: st < 3, dir: this.state.dir,
+      e: Object.fromEntries(KEYS.map((k) => [k, er[k] || ''])),
+      bad: Object.fromEntries(KEYS.map((k) => [k, !!er[k]])),
+      ...Object.fromEntries(KEYS.map((k) => ['set_' + k, set(k)])),
+      goBack: () => this.goStep(st - 1, 'back'),
+      locked: !this.state.form.source,
+      sendLabel: this.state.sending ? 'Envoi en cours…' : 'Demander une étude gratuite',
+      setPrenom: set('prenom'), setNom: set('nom'), setEntreprise: set('entreprise'), setEmail: set('email'), setTel: set('tel'),
+      setSecteur: set('secteur'), setVille: set('ville'), setTaille: set('taille'), setSites: set('sites'), setBudget: set('budget'), setMessage: set('message'),
+      submit: (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        if (this.state.step < 3) { if (this.validate(this.state.step)) { this.armPartial(); this.goStep(this.state.step + 1, 'next'); } return; }
+        if (!this.validate(3)) return;
+        const f = this.state.form;
+        const body = new URLSearchParams({
+          'form-name': 'demande-rappel',
+          'bot-field': '',
+          prenom: f.prenom, nom: f.nom, entreprise: f.entreprise, email: f.email, telephone: f.tel,
+          secteur: f.secteur, ville: f.ville, taille: f.taille,
+          points_de_vente: f.sites, budget: f.budget, message: f.message,
+          source: f.source,
+          page: (typeof location !== 'undefined' ? location.pathname : ''),
+        });
+        this._finalSent = true;
+        clearTimeout(this._partialTimer); this._partialTimer = null;
+        this.setState({ sending: true, error: false });
+        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+          .then((r) => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            if (typeof window.admovaTrackLead === 'function') window.admovaTrackLead();
+            this.setState({ sent: true, sending: false });
+          })
+          .catch(() => {
+            // hors Netlify (aperçu local) : on confirme quand même à l'utilisateur
+            this.setState({ sent: true, sending: false });
+          });
+      },
+    };
+  }
+
+  componentDidMount() { this.ensurePartialCapture(); this.ensureReveal(); }
 
   ensureReveal() {
     if (window.__admovaPageReveal) return;
@@ -503,6 +790,7 @@ class Component extends DCLogic {
   renderVals() {
     this.ensureReveal();
     return {
+      ...this.formVals(),
       footerColumns: [
         { title: 'Solution', links: [
           { label: 'Notre solution', href: '/notre-solution/' },

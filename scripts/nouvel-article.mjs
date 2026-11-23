@@ -110,7 +110,9 @@ const liees = articles.slice(-3).reverse().map(r => `    <a data-flink href="/${
 
 const h1 = fix(a.h1), lead = fix(a.lead), desc = String(a.desc).replace(/'/g, AP), title = String(a.title).replace(/'/g, AP);
 let page = read('scripts/modele-article.html');
-const rep = { '%%URL%%': URL_, '%%TITLE%%': esc(title), '%%DESC%%': esc(desc), '%%H1%%': esc(h1), '%%LEAD%%': esc(lead), '%%DATE%%': DATE, '%%KICKER%%': esc(fix(a.kicker)), '%%ARTICLE%%': corps, '%%RELATED%%': liees };
+// Dernier mot du titre en orange, comme sur l'accueil (« … au bon <span data-kmark>endroit.</span> »)
+const kmarkLast = (t) => t.replace(/(\S+(?:(?:\s|&nbsp;)+[?!:;])?)\s*$/, '<span data-kmark="">$1</span>');
+const rep = { '%%URL%%': URL_, '%%TITLE%%': esc(title), '%%DESC%%': esc(desc), '%%H1%%': kmarkLast(esc(h1)), '%%LEAD%%': esc(lead), '%%DATE%%': DATE, '%%KICKER%%': esc(fix(a.kicker)), '%%ARTICLE%%': corps, '%%RELATED%%': liees };
 for (const [k, v] of Object.entries(rep)) page = page.split(k).join(v);
 // dans le JSON-LD, les valeurs doivent être échappées pour JSON et non pour HTML
 page = page.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, (m) => m.split(esc(h1)).join(je(h1)).split(esc(desc)).join(je(desc)).split(esc(title)).join(je(title)));
