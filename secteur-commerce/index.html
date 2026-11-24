@@ -320,6 +320,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 480px) { h2[data-bigh] { font-size: 34px !important; letter-spacing: -1.2px !important; } }
 </style>
 <script src="/scalecity.js" defer></script>
+<style>
+  /* ---- bloc formulaire : titre à gauche, formulaire ScaleCity dans une carte blanche à droite ---- */
+  @media (max-width: 960px) {
+    [data-contact] { grid-template-columns: 1fr !important; gap: 28px !important; padding: 44px 28px !important; }
+    [data-contact-side] { position: static !important; }
+  }
+  @media (max-width: 480px) {
+    [data-contact] { padding: 32px 16px !important; border-radius: 20px !important; }
+    [data-contact] li { font-size: 15px !important; }
+  }
+</style>
 </head>
 <body>
 <x-dc>
@@ -457,12 +468,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 
 <section id="contact" data-r="pad" style="padding:96px 32px">
-  <div data-reveal="" style="max-width:1200px;margin:0 auto;background:#FDF0E8;border-radius:24px;padding:56px 48px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
-    <div style="width:100%;display:flex;flex-direction:column;gap:8px">
+  <div data-reveal="" data-contact="" style="max-width:1200px;margin:0 auto;background:#FDF0E8;border-radius:24px;padding:56px 48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:48px;align-items:start">
+    <div data-contact-side="" style="display:flex;flex-direction:column;gap:12px;position:sticky;top:120px">
           <h2 data-r="h2" data-bigh="" style="margin:0;font-size:64px;font-weight:800;line-height:0.98;letter-spacing:-2.8px;color:#0A0A0A;max-width:16ch">Prêt à toucher vos <span data-kmark="">clients&nbsp;?</span></h2>
-      <p style="margin:0;font-size:15px;font-weight:500;line-height:1.6;color:#5B6371">Création du visuel incluse · Mise en ligne en 48&nbsp;h</p>
+      <p style="margin:0;font-size:16px;font-weight:500;line-height:1.6;color:#5B6371;max-width:40ch">Laissez-nous vos coordonnées : on étudie votre zone et on vous propose un plan de diffusion adapté.</p>
+      <ul style="list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:14px">
+        <li style="display:flex;align-items:center;gap:12px;font-size:16px;font-weight:600;line-height:1.4;color:#0A0A0A"><span style="flex:none;width:24px;height:24px;border-radius:9999px;background:#D85A1A;display:inline-flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Étude de votre zone gratuite et sans engagement</li>
+        <li style="display:flex;align-items:center;gap:12px;font-size:16px;font-weight:600;line-height:1.4;color:#0A0A0A"><span style="flex:none;width:24px;height:24px;border-radius:9999px;background:#D85A1A;display:inline-flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Rappel sous 24&nbsp;h par un expert Admova</li>
+        <li style="display:flex;align-items:center;gap:12px;font-size:16px;font-weight:600;line-height:1.4;color:#0A0A0A"><span style="flex:none;width:24px;height:24px;border-radius:9999px;background:#D85A1A;display:inline-flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Création du visuel incluse, en ligne en 48&nbsp;h</li>
+      </ul>
     </div>
-    <div id="scalecity-form-efe5dba8" data-scalecity="" style="width:100%;min-height:600px"></div>
+    <div data-formcard="" style="background:#ffffff;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px -28px rgba(184,72,15,0.45),0 2px 8px rgba(10,10,10,0.05)">
+      <div id="scalecity-form-efe5dba8" data-scalecity="" style="width:100%;min-height:600px"></div>
+    </div>
   </div>
 </section>
 
