@@ -322,6 +322,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 860px) { h2[data-bigh] { font-size: 42px !important; letter-spacing: -1.6px !important; } }
   @media (max-width: 480px) { h2[data-bigh] { font-size: 34px !important; letter-spacing: -1.2px !important; } }
 </style>
+<script src="/scalecity.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -402,111 +403,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <h2 data-r="h2" data-bigh="" style="margin:0;font-size:64px;font-weight:800;line-height:0.98;letter-spacing:-2.8px;color:#0A0A0A;max-width:16ch">Prêt à toucher vos <span data-kmark="">clients&nbsp;?</span></h2>
       <p style="margin:0;font-size:15px;font-weight:500;line-height:1.6;color:#5B6371">Création du visuel incluse · Mise en ligne en 48&nbsp;h</p>
     </div>
-    <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
-      <form noValidate="{{ true }}" onSubmit="{{ submit }}" style="width:100%;display:flex;flex-direction:column;gap:18px">
-        <div style="display:flex;flex-direction:column;gap:12px">
-          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap">
-            <p tabindex="-1" data-step-title="" style="margin:0;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#B8480F;outline:none">Étape {{ step }} sur 3</p>
-            <p style="margin:0;font-size:15px;font-weight:700;color:#0A0A0A">{{ stepName }}</p>
-          </div>
-          <div role="progressbar" aria-label="Progression du formulaire" aria-valuemin="1" aria-valuemax="3" aria-valuenow="{{ step }}" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
-            <span data-seg="{{ seg1 }}" style="height:6px;border-radius:9999px;background:#F0DDD0"></span>
-            <span data-seg="{{ seg2 }}" style="height:6px;border-radius:9999px;background:#F0DDD0"></span>
-            <span data-seg="{{ seg3 }}" style="height:6px;border-radius:9999px;background:#F0DDD0"></span>
-          </div>
-        </div>
-        <sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ true }}">
-        <div data-step-panel="" data-dir="{{ dir }}" style="display:flex;flex-direction:column;gap:18px">
-          <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Prénom *</span><input data-focusable="" autocomplete="given-name" value="{{ f.prenom }}" onChange="{{ set_prenom }}" placeholder="Prénom" data-invalid="{{ bad.prenom }}" aria-invalid="{{ bad.prenom }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.prenom }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.prenom }}</p></sc-if></label>
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Nom *</span><input data-focusable="" autocomplete="family-name" value="{{ f.nom }}" onChange="{{ set_nom }}" placeholder="Nom" data-invalid="{{ bad.nom }}" aria-invalid="{{ bad.nom }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.nom }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.nom }}</p></sc-if></label>
-          </div>
-          <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">E-mail *</span><input data-focusable="" type="email" autocomplete="email" inputmode="email" value="{{ f.email }}" onChange="{{ set_email }}" placeholder="E-mail" data-invalid="{{ bad.email }}" aria-invalid="{{ bad.email }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.email }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.email }}</p></sc-if></label>
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Téléphone *</span><input data-focusable="" type="tel" autocomplete="tel" inputmode="tel" value="{{ f.tel }}" onChange="{{ set_tel }}" placeholder="Téléphone" data-invalid="{{ bad.tel }}" aria-invalid="{{ bad.tel }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.tel }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.tel }}</p></sc-if></label>
-          </div>
-        </div>
-        </sc-if>
-        <sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
-        <div data-step-panel="" data-dir="{{ dir }}" style="display:flex;flex-direction:column;gap:18px">
-          <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Nom de l’entreprise *</span><input data-focusable="" autocomplete="organization" value="{{ f.entreprise }}" onChange="{{ set_entreprise }}" placeholder="Nom de l’entreprise" data-invalid="{{ bad.entreprise }}" aria-invalid="{{ bad.entreprise }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.entreprise }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.entreprise }}</p></sc-if></label>
-          <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Secteur d’activité *</span>
-              <select data-focusable="" value="{{ f.secteur }}" onChange="{{ set_secteur }}" data-invalid="{{ bad.secteur }}" aria-invalid="{{ bad.secteur }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 20px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease">
-                <option value="">Secteur d’activité</option>
-                <option value="Commerce &amp; Retail">Commerce &amp; Retail</option>
-                <option value="Automobile">Automobile</option>
-                <option value="Immobilier">Immobilier</option>
-                <option value="Restauration">Restauration</option>
-                <option value="Santé &amp; Bien-être">Santé &amp; Bien-être</option>
-                <option value="Hôtellerie &amp; Tourisme">Hôtellerie &amp; Tourisme</option>
-                <option value="Services &amp; B2B">Services &amp; B2B</option>
-              </select><sc-if value="{{ e.secteur }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.secteur }}</p></sc-if></label>
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Ville *</span><input data-focusable="" autocomplete="address-level2" value="{{ f.ville }}" onChange="{{ set_ville }}" placeholder="Ville" data-invalid="{{ bad.ville }}" aria-invalid="{{ bad.ville }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 22px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease"><sc-if value="{{ e.ville }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.ville }}</p></sc-if></label>
-          </div>
-          <div data-r="two" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Nombre de points de vente *</span>
-              <select data-focusable="" value="{{ f.sites }}" onChange="{{ set_sites }}" data-invalid="{{ bad.sites }}" aria-invalid="{{ bad.sites }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 20px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease">
-                <option value="">Nombre de points de vente</option>
-                <option value="1">1 point de vente</option>
-                <option value="2 à 9">2 à 9</option>
-                <option value="10 à 49">10 à 49</option>
-                <option value="50 à 199">50 à 199</option>
-                <option value="200 et plus">200 et plus</option>
-              </select><sc-if value="{{ e.sites }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.sites }}</p></sc-if></label>
-            <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Budget envisagé *</span>
-              <select data-focusable="" value="{{ f.budget }}" onChange="{{ set_budget }}" data-invalid="{{ bad.budget }}" aria-invalid="{{ bad.budget }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 20px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease">
-                <option value="">Budget envisagé</option>
-                <option value="Moins de 1 000 € / mois">Moins de 1 000 € / mois</option>
-                <option value="1 000 à 5 000 € / mois">1 000 à 5 000 € / mois</option>
-                <option value="5 000 à 20 000 € / mois">5 000 à 20 000 € / mois</option>
-                <option value="Plus de 20 000 € / mois">Plus de 20 000 € / mois</option>
-                <option value="À définir ensemble">À définir ensemble</option>
-              </select><sc-if value="{{ e.budget }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.budget }}</p></sc-if></label>
-          </div>
-          <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Taille de l’entreprise *</span>
-              <select data-focusable="" value="{{ f.taille }}" onChange="{{ set_taille }}" data-invalid="{{ bad.taille }}" aria-invalid="{{ bad.taille }}" style="height:52px;border:1px solid #F0DDD0;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:0 20px;outline:none;transition:border-color 160ms ease, box-shadow 160ms ease">
-                <option value="">Taille de l’entreprise</option>
-                <option value="TPE">TPE</option>
-                <option value="PME">PME</option>
-                <option value="Franchise ou ETI">Franchise ou ETI</option>
-                <option value="Grand compte">Grand compte</option>
-              </select><sc-if value="{{ e.taille }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.taille }}</p></sc-if></label>
-        </div>
-        </sc-if>
-        <sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}">
-        <div data-step-panel="" data-dir="{{ dir }}" style="display:flex;flex-direction:column;gap:18px">
-          <label style="display:flex;flex-direction:column;gap:7px"><span style="font-size:14px;font-weight:600;color:#0A0A0A">Message *</span><textarea data-focusable="" data-invalid="{{ bad.message }}" aria-invalid="{{ bad.message }}" rows="3" value="{{ f.message }}" onChange="{{ setMessage }}" placeholder="Votre projet en quelques mots" style="border:1px solid #F0DDD0;border-radius:20px;background:#ffffff;color:#0A0A0A;font-size:15px;padding:16px 22px;outline:none;resize:vertical;font-family:inherit;line-height:1.6;transition:border-color 160ms ease, box-shadow 160ms ease"></textarea><sc-if value="{{ e.message }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">{{ e.message }}</p></sc-if></label>
-          <fieldset data-srcset="" aria-required="true" style="margin:0;padding:0;border:0;min-width:0;display:flex;flex-direction:column;gap:10px">
-          <legend style="padding:0;margin:0 0 10px;font-size:14px;font-weight:600;color:#0A0A0A">Comment nous avez-vous connu ? *</legend>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px">
-            <sc-for list="{{ sources }}" as="so" hint-placeholder-count="6">
-              <label data-src="" style="display:flex;align-items:center;gap:12px;min-height:48px;padding:12px 16px;box-sizing:border-box;border:1px solid #F0DDD0;border-radius:12px;background:#ffffff;cursor:pointer;font-size:14px;font-weight:500;line-height:1.35;color:#0A0A0A;transition:border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease">
-                <input type="radio" name="source" value="{{ so.v }}" checked="{{ so.checked }}" onChange="{{ so.pick }}" style="flex:none;width:18px;height:18px;margin:0;accent-color:#D85A1A;cursor:pointer">
-                <span>{{ so.v }}</span>
-              </label>
-            </sc-for>
-          </div>
-          <sc-if value="{{ srcError }}" hint-placeholder-val="{{ false }}">
-            <p role="alert" style="margin:0;font-size:13px;font-weight:500;color:#B8480F">Merci d’indiquer comment vous nous avez connu</p>
-          </sc-if>
-        </fieldset>
-        </div>
-        </sc-if>
-        <div data-stepnav="" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:4px">
-          <sc-if value="{{ hasBack }}" hint-placeholder-val="{{ false }}"><button data-btn="line" type="button" onClick="{{ goBack }}" style="border:1px solid #E5E7EB;border-radius:9999px;background:#ffffff;color:#0A0A0A;font-size:15px;font-weight:600;padding:15px 28px;cursor:pointer">Retour</button></sc-if>
-          <sc-if value="{{ notLast }}" hint-placeholder-val="{{ true }}"><button data-btn="solid" type="submit" style="border:0;border-radius:9999px;background:#B8480F;color:#ffffff;font-size:15px;font-weight:600;padding:16px 32px;cursor:pointer">Suivant</button></sc-if>
-          <sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}"><button data-btn="solid" type="submit" disabled="{{ sending }}" data-locked="{{ locked }}" aria-disabled="{{ locked }}" style="border:0;border-radius:9999px;background:#B8480F;color:#ffffff;font-size:15px;font-weight:600;padding:16px 32px;cursor:pointer;display:inline-flex;align-items:center;gap:9px">{{ sendLabel }}</button></sc-if>
-        </div>
-        <p style="margin:0;font-size:12.5px;line-height:1.55;color:#807D75">Vos réponses sont enregistrées à chaque étape, pour que nous puissions vous recontacter même si vous ne terminez pas. <a href="/confidentialite/" style="color:#5B6371">Confidentialité</a></p>
-      </form>
-    </sc-if>
-    <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-      <div style="width:100%;background:#ffffff;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:10px;align-items:flex-start">
-        <h3 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-0.7px;color:#0A0A0A">Demande envoyée !</h3>
-        <p style="margin:0;font-size:16px;line-height:1.65;color:#5B6371">Merci, nous vous recontactons sous 24&nbsp;h. À très vite !</p>
-      </div>
-    </sc-if>
+    <div id="scalecity-form-7dfc7521" data-scalecity="" style="width:100%;min-height:600px"></div>
   </div>
 </section>
 
@@ -722,7 +619,7 @@ class Component extends DCLogic {
     };
   }
 
-  componentDidMount() { this.ensurePartialCapture(); this.ensureReveal(); }
+  componentDidMount() {  this.ensureReveal(); }
 
   ensureReveal() {
     if (window.__admovaPageReveal) return;
